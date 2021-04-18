@@ -1,0 +1,1441 @@
+INFO:root:Namespace(model_name='SASRec')
+INFO:root:--------------------------------------------- BEGIN: 2021-04-15 22:46:23 ---------------------------------------------
+INFO:root:
+=================================
+ Arguments       | Values        
+=================================
+ batch_size      | 64           
+ buffer          | 1            
+ dataset         | RealRecord   
+ dropout         | 0            
+ early_stop      | 10           
+ emb_size        | 64           
+ epoch           | 100          
+ eval_batch_size | 16           
+ gpu             | 0            
+ history_max     | 20           
+ l2              | 1e-06        
+ load            | 0            
+ lr              | 0.0001       
+ metric          | ["NDCG","HR"]
+ num_heads       | 1            
+ num_layers      | 1            
+ num_neg         | 2            
+ num_workers     | 0            
+ optimizer       | Adam         
+ random_seed     | 2021         
+ topk            | [10,20]      
+=================================
+INFO:root:cuda available: False
+INFO:root:# cuda devices: 0
+INFO:root:Reading data from "../data/", dataset = "RealRecord" 
+INFO:root:Counting dataset statistics...
+INFO:root:"# user": 14682, "# item": 8714, "# entry": 151254
+INFO:root:Appending history info...
+INFO:root:Save corpus to ../data/RealRecord\BaseReader.pkl
+INFO:root:#params: 580096
+INFO:root:SASRec(
+  (i_embeddings): Embedding(8714, 64)
+  (p_embeddings): Embedding(21, 64)
+  (transformer_block): ModuleList(
+    (0): TransformerLayer(
+      (masked_attn_head): MultiHeadAttention(
+        (q_linear): Linear(in_features=64, out_features=64, bias=True)
+        (k_linear): Linear(in_features=64, out_features=64, bias=True)
+        (v_linear): Linear(in_features=64, out_features=64, bias=True)
+      )
+      (layer_norm1): LayerNorm((64,), eps=1e-05, elementwise_affine=True)
+      (dropout1): Dropout(p=0, inplace=False)
+      (linear1): Linear(in_features=64, out_features=64, bias=True)
+      (linear2): Linear(in_features=64, out_features=64, bias=True)
+      (layer_norm2): LayerNorm((64,), eps=1e-05, elementwise_affine=True)
+      (dropout2): Dropout(p=0, inplace=False)
+    )
+  )
+)
+INFO:root:Test Before Training: (HR@10:0.1050,HR@20:0.2059,NDCG@10:0.0465,NDCG@20:0.0717)
+INFO:root:Optimizer: Adam
+INFO:root:Epoch 1     loss=0.6125 [87.9 s]	 dev=(HR@10:0.4150,NDCG@10:0.2387) test=(HR@10:0.3828,NDCG@10:0.2209) [10.5 s] 
+INFO:root:Save model to ../model/SASRec/SASRec__RealRecord__2021__epoch=10...
+INFO:root:Namespace(model_name='SASRec')
+INFO:root:--------------------------------------------- BEGIN: 2021-04-15 22:53:01 ---------------------------------------------
+INFO:root:
+=================================
+ Arguments       | Values        
+=================================
+ batch_size      | 64           
+ buffer          | 1            
+ dataset         | RealRecord   
+ dropout         | 0            
+ early_stop      | 10           
+ emb_size        | 64           
+ epoch           | 100          
+ eval_batch_size | 16           
+ gpu             | 0            
+ history_max     | 20           
+ l2              | 1e-06        
+ load            | 0            
+ lr              | 0.0001       
+ metric          | ["NDCG","HR"]
+ num_heads       | 1            
+ num_layers      | 1            
+ num_neg         | 2            
+ num_workers     | 0            
+ optimizer       | Adam         
+ random_seed     | 2021         
+ topk            | [10,20]      
+=================================
+INFO:root:cuda available: False
+INFO:root:# cuda devices: 0
+INFO:root:Reading data from "../data/", dataset = "RealRecord" 
+INFO:root:Counting dataset statistics...
+INFO:root:"# user": 14682, "# item": 8714, "# entry": 151254
+INFO:root:Appending history info...
+INFO:root:Save corpus to ../data/RealRecord\BaseReader.pkl
+INFO:root:#params: 580096
+INFO:root:SASRec(
+  (i_embeddings): Embedding(8714, 64)
+  (p_embeddings): Embedding(21, 64)
+  (transformer_block): ModuleList(
+    (0): TransformerLayer(
+      (masked_attn_head): MultiHeadAttention(
+        (q_linear): Linear(in_features=64, out_features=64, bias=True)
+        (k_linear): Linear(in_features=64, out_features=64, bias=True)
+        (v_linear): Linear(in_features=64, out_features=64, bias=True)
+      )
+      (layer_norm1): LayerNorm((64,), eps=1e-05, elementwise_affine=True)
+      (dropout1): Dropout(p=0, inplace=False)
+      (linear1): Linear(in_features=64, out_features=64, bias=True)
+      (linear2): Linear(in_features=64, out_features=64, bias=True)
+      (layer_norm2): LayerNorm((64,), eps=1e-05, elementwise_affine=True)
+      (dropout2): Dropout(p=0, inplace=False)
+    )
+  )
+)
+INFO:root:Test Before Training: (HR@10:0.1050,HR@20:0.2059,NDCG@10:0.0465,NDCG@20:0.0717)
+INFO:root:Optimizer: Adam
+INFO:root:Namespace(model_name='SASRec')
+INFO:root:--------------------------------------------- BEGIN: 2021-04-15 22:54:07 ---------------------------------------------
+INFO:root:
+=================================
+ Arguments       | Values        
+=================================
+ batch_size      | 1            
+ buffer          | 1            
+ dataset         | RealRecord   
+ dropout         | 0            
+ early_stop      | 10           
+ emb_size        | 1            
+ epoch           | 100          
+ eval_batch_size | 16           
+ gpu             | 0            
+ history_max     | 20           
+ l2              | 1e-06        
+ load            | 0            
+ lr              | 0.0001       
+ metric          | ["NDCG","HR"]
+ num_heads       | 1            
+ num_layers      | 1            
+ num_neg         | 2            
+ num_workers     | 0            
+ optimizer       | Adam         
+ random_seed     | 2021         
+ topk            | [10,20]      
+=================================
+INFO:root:cuda available: False
+INFO:root:# cuda devices: 0
+INFO:root:Reading data from "../data/", dataset = "RealRecord" 
+INFO:root:Counting dataset statistics...
+INFO:root:"# user": 14682, "# item": 8714, "# entry": 151254
+INFO:root:Appending history info...
+INFO:root:Save corpus to ../data/RealRecord\BaseReader.pkl
+INFO:root:#params: 8749
+INFO:root:SASRec(
+  (i_embeddings): Embedding(8714, 1)
+  (p_embeddings): Embedding(21, 1)
+  (transformer_block): ModuleList(
+    (0): TransformerLayer(
+      (masked_attn_head): MultiHeadAttention(
+        (q_linear): Linear(in_features=1, out_features=1, bias=True)
+        (k_linear): Linear(in_features=1, out_features=1, bias=True)
+        (v_linear): Linear(in_features=1, out_features=1, bias=True)
+      )
+      (layer_norm1): LayerNorm((1,), eps=1e-05, elementwise_affine=True)
+      (dropout1): Dropout(p=0, inplace=False)
+      (linear1): Linear(in_features=1, out_features=1, bias=True)
+      (linear2): Linear(in_features=1, out_features=1, bias=True)
+      (layer_norm2): LayerNorm((1,), eps=1e-05, elementwise_affine=True)
+      (dropout2): Dropout(p=0, inplace=False)
+    )
+  )
+)
+INFO:root:Namespace(model_name='SASRec')
+INFO:root:--------------------------------------------- BEGIN: 2021-04-15 22:56:42 ---------------------------------------------
+INFO:root:
+=================================
+ Arguments       | Values        
+=================================
+ batch_size      | 1            
+ buffer          | 1            
+ dataset         | RealRecord   
+ dropout         | 0            
+ early_stop      | 10           
+ emb_size        | 1            
+ epoch           | 100          
+ eval_batch_size | 1            
+ gpu             | 0            
+ history_max     | 20           
+ l2              | 1e-06        
+ load            | 0            
+ lr              | 0.0001       
+ metric          | ["NDCG","HR"]
+ num_heads       | 1            
+ num_layers      | 1            
+ num_neg         | 2            
+ num_workers     | 0            
+ optimizer       | Adam         
+ random_seed     | 2021         
+ topk            | [10,20]      
+=================================
+INFO:root:cuda available: False
+INFO:root:# cuda devices: 0
+INFO:root:Reading data from "../data/", dataset = "RealRecord" 
+INFO:root:Counting dataset statistics...
+INFO:root:"# user": 14682, "# item": 8714, "# entry": 151254
+INFO:root:Appending history info...
+INFO:root:Save corpus to ../data/RealRecord\BaseReader.pkl
+INFO:root:#params: 8749
+INFO:root:SASRec(
+  (i_embeddings): Embedding(8714, 1)
+  (p_embeddings): Embedding(21, 1)
+  (transformer_block): ModuleList(
+    (0): TransformerLayer(
+      (masked_attn_head): MultiHeadAttention(
+        (q_linear): Linear(in_features=1, out_features=1, bias=True)
+        (k_linear): Linear(in_features=1, out_features=1, bias=True)
+        (v_linear): Linear(in_features=1, out_features=1, bias=True)
+      )
+      (layer_norm1): LayerNorm((1,), eps=1e-05, elementwise_affine=True)
+      (dropout1): Dropout(p=0, inplace=False)
+      (linear1): Linear(in_features=1, out_features=1, bias=True)
+      (linear2): Linear(in_features=1, out_features=1, bias=True)
+      (layer_norm2): LayerNorm((1,), eps=1e-05, elementwise_affine=True)
+      (dropout2): Dropout(p=0, inplace=False)
+    )
+  )
+)
+INFO:root:Namespace(model_name='SASRec')
+INFO:root:--------------------------------------------- BEGIN: 2021-04-15 23:03:06 ---------------------------------------------
+INFO:root:
+=================================
+ Arguments       | Values        
+=================================
+ batch_size      | 1            
+ buffer          | 1            
+ dataset         | RealRecord   
+ dropout         | 0            
+ early_stop      | 10           
+ emb_size        | 1            
+ epoch           | 100          
+ eval_batch_size | 1            
+ gpu             | 0            
+ history_max     | 20           
+ l2              | 1e-06        
+ load            | 0            
+ lr              | 0.0001       
+ metric          | ["NDCG","HR"]
+ num_heads       | 1            
+ num_layers      | 1            
+ num_neg         | 2            
+ num_workers     | 0            
+ optimizer       | Adam         
+ random_seed     | 2021         
+ topk            | [10,20]      
+=================================
+INFO:root:cuda available: False
+INFO:root:# cuda devices: 0
+INFO:root:#params: 8749
+INFO:root:SASRec(
+  (i_embeddings): Embedding(8714, 1)
+  (p_embeddings): Embedding(21, 1)
+  (transformer_block): ModuleList(
+    (0): TransformerLayer(
+      (masked_attn_head): MultiHeadAttention(
+        (q_linear): Linear(in_features=1, out_features=1, bias=True)
+        (k_linear): Linear(in_features=1, out_features=1, bias=True)
+        (v_linear): Linear(in_features=1, out_features=1, bias=True)
+      )
+      (layer_norm1): LayerNorm((1,), eps=1e-05, elementwise_affine=True)
+      (dropout1): Dropout(p=0, inplace=False)
+      (linear1): Linear(in_features=1, out_features=1, bias=True)
+      (linear2): Linear(in_features=1, out_features=1, bias=True)
+      (layer_norm2): LayerNorm((1,), eps=1e-05, elementwise_affine=True)
+      (dropout2): Dropout(p=0, inplace=False)
+    )
+  )
+)
+INFO:root:Namespace(model_name='SASRec')
+INFO:root:--------------------------------------------- BEGIN: 2021-04-15 23:07:58 ---------------------------------------------
+INFO:root:
+=================================
+ Arguments       | Values        
+=================================
+ batch_size      | 1            
+ buffer          | 1            
+ dataset         | RealRecord   
+ dropout         | 0            
+ early_stop      | 10           
+ emb_size        | 1            
+ epoch           | 100          
+ eval_batch_size | 1            
+ gpu             | 0            
+ history_max     | 20           
+ l2              | 1e-06        
+ load            | 0            
+ lr              | 0.0001       
+ metric          | ["NDCG","HR"]
+ num_heads       | 1            
+ num_layers      | 1            
+ num_neg         | 2            
+ num_workers     | 0            
+ optimizer       | Adam         
+ random_seed     | 2021         
+ topk            | [10,20]      
+=================================
+INFO:root:cuda available: False
+INFO:root:# cuda devices: 0
+INFO:root:#params: 8749
+INFO:root:Namespace(model_name='SASRec')
+INFO:root:--------------------------------------------- BEGIN: 2021-04-15 23:09:28 ---------------------------------------------
+INFO:root:
+=================================
+ Arguments       | Values        
+=================================
+ batch_size      | 1            
+ buffer          | 1            
+ dataset         | RealRecord   
+ dropout         | 0            
+ early_stop      | 10           
+ emb_size        | 1            
+ epoch           | 100          
+ eval_batch_size | 1            
+ gpu             | 0            
+ history_max     | 20           
+ l2              | 1e-06        
+ load            | 0            
+ lr              | 0.0001       
+ metric          | ["NDCG","HR"]
+ num_heads       | 1            
+ num_layers      | 1            
+ num_neg         | 2            
+ num_workers     | 0            
+ optimizer       | Adam         
+ random_seed     | 2021         
+ topk            | [10,20]      
+=================================
+INFO:root:cuda available: False
+INFO:root:# cuda devices: 0
+INFO:root:#params: 8749
+INFO:root:SASRec(
+  (i_embeddings): Embedding(8714, 1)
+  (p_embeddings): Embedding(21, 1)
+  (transformer_block): ModuleList(
+    (0): TransformerLayer(
+      (masked_attn_head): MultiHeadAttention(
+        (q_linear): Linear(in_features=1, out_features=1, bias=True)
+        (k_linear): Linear(in_features=1, out_features=1, bias=True)
+        (v_linear): Linear(in_features=1, out_features=1, bias=True)
+      )
+      (layer_norm1): LayerNorm((1,), eps=1e-05, elementwise_affine=True)
+      (dropout1): Dropout(p=0, inplace=False)
+      (linear1): Linear(in_features=1, out_features=1, bias=True)
+      (linear2): Linear(in_features=1, out_features=1, bias=True)
+      (layer_norm2): LayerNorm((1,), eps=1e-05, elementwise_affine=True)
+      (dropout2): Dropout(p=0, inplace=False)
+    )
+  )
+)
+INFO:root:Namespace(model_name='SASRec')
+INFO:root:--------------------------------------------- BEGIN: 2021-04-15 23:11:22 ---------------------------------------------
+INFO:root:
+=================================
+ Arguments       | Values        
+=================================
+ batch_size      | 1            
+ buffer          | 1            
+ dataset         | RealRecord   
+ dropout         | 0            
+ early_stop      | 10           
+ emb_size        | 1            
+ epoch           | 100          
+ eval_batch_size | 1            
+ gpu             | 0            
+ history_max     | 20           
+ l2              | 1e-06        
+ load            | 0            
+ lr              | 0.0001       
+ metric          | ["NDCG","HR"]
+ num_heads       | 1            
+ num_layers      | 1            
+ num_neg         | 2            
+ num_workers     | 0            
+ optimizer       | Adam         
+ random_seed     | 2021         
+ topk            | [10,20]      
+=================================
+INFO:root:cuda available: False
+INFO:root:# cuda devices: 0
+INFO:root:#params: 8749
+INFO:root:SASRec(
+  (i_embeddings): Embedding(8714, 1)
+  (p_embeddings): Embedding(21, 1)
+  (transformer_block): ModuleList(
+    (0): TransformerLayer(
+      (masked_attn_head): MultiHeadAttention(
+        (q_linear): Linear(in_features=1, out_features=1, bias=True)
+        (k_linear): Linear(in_features=1, out_features=1, bias=True)
+        (v_linear): Linear(in_features=1, out_features=1, bias=True)
+      )
+      (layer_norm1): LayerNorm((1,), eps=1e-05, elementwise_affine=True)
+      (dropout1): Dropout(p=0, inplace=False)
+      (linear1): Linear(in_features=1, out_features=1, bias=True)
+      (linear2): Linear(in_features=1, out_features=1, bias=True)
+      (layer_norm2): LayerNorm((1,), eps=1e-05, elementwise_affine=True)
+      (dropout2): Dropout(p=0, inplace=False)
+    )
+  )
+)
+INFO:root:Namespace(model_name='SASRec')
+INFO:root:--------------------------------------------- BEGIN: 2021-04-15 23:12:59 ---------------------------------------------
+INFO:root:
+=================================
+ Arguments       | Values        
+=================================
+ batch_size      | 64           
+ buffer          | 1            
+ dataset         | RealRecord   
+ dropout         | 0            
+ early_stop      | 10           
+ emb_size        | 1            
+ epoch           | 100          
+ eval_batch_size | 16           
+ gpu             | 0            
+ history_max     | 20           
+ l2              | 1e-06        
+ load            | 0            
+ lr              | 0.0001       
+ metric          | ["NDCG","HR"]
+ num_heads       | 1            
+ num_layers      | 1            
+ num_neg         | 2            
+ num_workers     | 0            
+ optimizer       | Adam         
+ random_seed     | 2021         
+ topk            | [10,20]      
+=================================
+INFO:root:cuda available: False
+INFO:root:# cuda devices: 0
+INFO:root:#params: 8749
+INFO:root:SASRec(
+  (i_embeddings): Embedding(8714, 1)
+  (p_embeddings): Embedding(21, 1)
+  (transformer_block): ModuleList(
+    (0): TransformerLayer(
+      (masked_attn_head): MultiHeadAttention(
+        (q_linear): Linear(in_features=1, out_features=1, bias=True)
+        (k_linear): Linear(in_features=1, out_features=1, bias=True)
+        (v_linear): Linear(in_features=1, out_features=1, bias=True)
+      )
+      (layer_norm1): LayerNorm((1,), eps=1e-05, elementwise_affine=True)
+      (dropout1): Dropout(p=0, inplace=False)
+      (linear1): Linear(in_features=1, out_features=1, bias=True)
+      (linear2): Linear(in_features=1, out_features=1, bias=True)
+      (layer_norm2): LayerNorm((1,), eps=1e-05, elementwise_affine=True)
+      (dropout2): Dropout(p=0, inplace=False)
+    )
+  )
+)
+INFO:root:Namespace(model_name='SASRec')
+INFO:root:--------------------------------------------- BEGIN: 2021-04-15 23:14:18 ---------------------------------------------
+INFO:root:
+=================================
+ Arguments       | Values        
+=================================
+ batch_size      | 64           
+ buffer          | 1            
+ dataset         | RealRecord   
+ dropout         | 0            
+ early_stop      | 10           
+ emb_size        | 64           
+ epoch           | 100          
+ eval_batch_size | 16           
+ gpu             | 0            
+ history_max     | 20           
+ l2              | 1e-06        
+ load            | 0            
+ lr              | 0.0001       
+ metric          | ["NDCG","HR"]
+ num_heads       | 1            
+ num_layers      | 1            
+ num_neg         | 2            
+ num_workers     | 0            
+ optimizer       | Adam         
+ random_seed     | 2021         
+ topk            | [10,20]      
+=================================
+INFO:root:cuda available: False
+INFO:root:# cuda devices: 0
+INFO:root:#params: 580096
+INFO:root:SASRec(
+  (i_embeddings): Embedding(8714, 64)
+  (p_embeddings): Embedding(21, 64)
+  (transformer_block): ModuleList(
+    (0): TransformerLayer(
+      (masked_attn_head): MultiHeadAttention(
+        (q_linear): Linear(in_features=64, out_features=64, bias=True)
+        (k_linear): Linear(in_features=64, out_features=64, bias=True)
+        (v_linear): Linear(in_features=64, out_features=64, bias=True)
+      )
+      (layer_norm1): LayerNorm((64,), eps=1e-05, elementwise_affine=True)
+      (dropout1): Dropout(p=0, inplace=False)
+      (linear1): Linear(in_features=64, out_features=64, bias=True)
+      (linear2): Linear(in_features=64, out_features=64, bias=True)
+      (layer_norm2): LayerNorm((64,), eps=1e-05, elementwise_affine=True)
+      (dropout2): Dropout(p=0, inplace=False)
+    )
+  )
+)
+INFO:root:Namespace(model_name='SASRec')
+INFO:root:Namespace(model_name='SASRec')
+INFO:root:--------------------------------------------- BEGIN: 2021-04-15 23:16:34 ---------------------------------------------
+INFO:root:
+=================================
+ Arguments       | Values        
+=================================
+ batch_size      | 64           
+ buffer          | 1            
+ dataset         | RealRecord   
+ dropout         | 0            
+ early_stop      | 10           
+ emb_size        | 64           
+ epoch           | 100          
+ eval_batch_size | 16           
+ gpu             | 0            
+ history_max     | 20           
+ l2              | 1e-06        
+ load            | 0            
+ lr              | 0.0001       
+ metric          | ["NDCG","HR"]
+ num_heads       | 1            
+ num_layers      | 1            
+ num_neg         | 2            
+ num_workers     | 0            
+ optimizer       | Adam         
+ random_seed     | 2021         
+ topk            | [10,20]      
+=================================
+INFO:root:cuda available: False
+INFO:root:# cuda devices: 0
+INFO:root:#params: 580096
+INFO:root:SASRec(
+  (i_embeddings): Embedding(8714, 64)
+  (p_embeddings): Embedding(21, 64)
+  (transformer_block): ModuleList(
+    (0): TransformerLayer(
+      (masked_attn_head): MultiHeadAttention(
+        (q_linear): Linear(in_features=64, out_features=64, bias=True)
+        (k_linear): Linear(in_features=64, out_features=64, bias=True)
+        (v_linear): Linear(in_features=64, out_features=64, bias=True)
+      )
+      (layer_norm1): LayerNorm((64,), eps=1e-05, elementwise_affine=True)
+      (dropout1): Dropout(p=0, inplace=False)
+      (linear1): Linear(in_features=64, out_features=64, bias=True)
+      (linear2): Linear(in_features=64, out_features=64, bias=True)
+      (layer_norm2): LayerNorm((64,), eps=1e-05, elementwise_affine=True)
+      (dropout2): Dropout(p=0, inplace=False)
+    )
+  )
+)
+INFO:root:Namespace(model_name='SASRec')
+INFO:root:--------------------------------------------- BEGIN: 2021-04-15 23:17:49 ---------------------------------------------
+INFO:root:
+=================================
+ Arguments       | Values        
+=================================
+ batch_size      | 64           
+ buffer          | 1            
+ dataset         | RealRecord   
+ dropout         | 0            
+ early_stop      | 10           
+ emb_size        | 64           
+ epoch           | 100          
+ eval_batch_size | 16           
+ gpu             | 0            
+ history_max     | 20           
+ l2              | 1e-06        
+ load            | 0            
+ lr              | 0.0001       
+ metric          | ["NDCG","HR"]
+ num_heads       | 1            
+ num_layers      | 1            
+ num_neg         | 2            
+ num_workers     | 0            
+ optimizer       | Adam         
+ random_seed     | 2021         
+ topk            | [10,20]      
+=================================
+INFO:root:cuda available: False
+INFO:root:# cuda devices: 0
+INFO:root:#params: 580096
+INFO:root:SASRec(
+  (i_embeddings): Embedding(8714, 64)
+  (p_embeddings): Embedding(21, 64)
+  (transformer_block): ModuleList(
+    (0): TransformerLayer(
+      (masked_attn_head): MultiHeadAttention(
+        (q_linear): Linear(in_features=64, out_features=64, bias=True)
+        (k_linear): Linear(in_features=64, out_features=64, bias=True)
+        (v_linear): Linear(in_features=64, out_features=64, bias=True)
+      )
+      (layer_norm1): LayerNorm((64,), eps=1e-05, elementwise_affine=True)
+      (dropout1): Dropout(p=0, inplace=False)
+      (linear1): Linear(in_features=64, out_features=64, bias=True)
+      (linear2): Linear(in_features=64, out_features=64, bias=True)
+      (layer_norm2): LayerNorm((64,), eps=1e-05, elementwise_affine=True)
+      (dropout2): Dropout(p=0, inplace=False)
+    )
+  )
+)
+INFO:root:Namespace(model_name='SASRec')
+INFO:root:--------------------------------------------- BEGIN: 2021-04-15 23:19:26 ---------------------------------------------
+INFO:root:
+=================================
+ Arguments       | Values        
+=================================
+ batch_size      | 64           
+ buffer          | 1            
+ dataset         | RealRecord   
+ dropout         | 0            
+ early_stop      | 10           
+ emb_size        | 64           
+ epoch           | 100          
+ eval_batch_size | 16           
+ gpu             | 0            
+ history_max     | 20           
+ l2              | 1e-06        
+ load            | 0            
+ lr              | 0.0001       
+ metric          | ["NDCG","HR"]
+ num_heads       | 1            
+ num_layers      | 1            
+ num_neg         | 2            
+ num_workers     | 0            
+ optimizer       | Adam         
+ random_seed     | 2021         
+ topk            | [10,20]      
+=================================
+INFO:root:cuda available: False
+INFO:root:# cuda devices: 0
+INFO:root:#params: 580096
+INFO:root:SASRec(
+  (i_embeddings): Embedding(8714, 64)
+  (p_embeddings): Embedding(21, 64)
+  (transformer_block): ModuleList(
+    (0): TransformerLayer(
+      (masked_attn_head): MultiHeadAttention(
+        (q_linear): Linear(in_features=64, out_features=64, bias=True)
+        (k_linear): Linear(in_features=64, out_features=64, bias=True)
+        (v_linear): Linear(in_features=64, out_features=64, bias=True)
+      )
+      (layer_norm1): LayerNorm((64,), eps=1e-05, elementwise_affine=True)
+      (dropout1): Dropout(p=0, inplace=False)
+      (linear1): Linear(in_features=64, out_features=64, bias=True)
+      (linear2): Linear(in_features=64, out_features=64, bias=True)
+      (layer_norm2): LayerNorm((64,), eps=1e-05, elementwise_affine=True)
+      (dropout2): Dropout(p=0, inplace=False)
+    )
+  )
+)
+INFO:root:Namespace(model_name='SASRec')
+INFO:root:--------------------------------------------- BEGIN: 2021-04-15 23:23:37 ---------------------------------------------
+INFO:root:
+=================================
+ Arguments       | Values        
+=================================
+ batch_size      | 64           
+ buffer          | 1            
+ dataset         | RealRecord   
+ dropout         | 0            
+ early_stop      | 10           
+ emb_size        | 64           
+ epoch           | 100          
+ eval_batch_size | 16           
+ gpu             | 0            
+ history_max     | 20           
+ l2              | 1e-06        
+ load            | 0            
+ lr              | 0.0001       
+ metric          | ["NDCG","HR"]
+ num_heads       | 1            
+ num_layers      | 1            
+ num_neg         | 2            
+ num_workers     | 0            
+ optimizer       | Adam         
+ random_seed     | 2021         
+ topk            | [10,20]      
+=================================
+INFO:root:cuda available: False
+INFO:root:# cuda devices: 0
+INFO:root:#params: 580096
+INFO:root:SASRec(
+  (i_embeddings): Embedding(8714, 64)
+  (p_embeddings): Embedding(21, 64)
+  (transformer_block): ModuleList(
+    (0): TransformerLayer(
+      (masked_attn_head): MultiHeadAttention(
+        (q_linear): Linear(in_features=64, out_features=64, bias=True)
+        (k_linear): Linear(in_features=64, out_features=64, bias=True)
+        (v_linear): Linear(in_features=64, out_features=64, bias=True)
+      )
+      (layer_norm1): LayerNorm((64,), eps=1e-05, elementwise_affine=True)
+      (dropout1): Dropout(p=0, inplace=False)
+      (linear1): Linear(in_features=64, out_features=64, bias=True)
+      (linear2): Linear(in_features=64, out_features=64, bias=True)
+      (layer_norm2): LayerNorm((64,), eps=1e-05, elementwise_affine=True)
+      (dropout2): Dropout(p=0, inplace=False)
+    )
+  )
+)
+INFO:root:Namespace(model_name='SASRec')
+INFO:root:--------------------------------------------- BEGIN: 2021-04-15 23:28:39 ---------------------------------------------
+INFO:root:
+=================================
+ Arguments       | Values        
+=================================
+ batch_size      | 64           
+ buffer          | 1            
+ dataset         | RealRecord   
+ dropout         | 0            
+ early_stop      | 10           
+ emb_size        | 64           
+ epoch           | 100          
+ eval_batch_size | 16           
+ gpu             | 0            
+ history_max     | 20           
+ l2              | 1e-06        
+ load            | 0            
+ lr              | 0.0001       
+ metric          | ["NDCG","HR"]
+ num_heads       | 1            
+ num_layers      | 1            
+ num_neg         | 2            
+ num_workers     | 0            
+ optimizer       | Adam         
+ random_seed     | 2021         
+ topk            | [10,20]      
+=================================
+INFO:root:cuda available: False
+INFO:root:# cuda devices: 0
+INFO:root:#params: 580096
+INFO:root:SASRec(
+  (i_embeddings): Embedding(8714, 64)
+  (p_embeddings): Embedding(21, 64)
+  (transformer_block): ModuleList(
+    (0): TransformerLayer(
+      (masked_attn_head): MultiHeadAttention(
+        (q_linear): Linear(in_features=64, out_features=64, bias=True)
+        (k_linear): Linear(in_features=64, out_features=64, bias=True)
+        (v_linear): Linear(in_features=64, out_features=64, bias=True)
+      )
+      (layer_norm1): LayerNorm((64,), eps=1e-05, elementwise_affine=True)
+      (dropout1): Dropout(p=0, inplace=False)
+      (linear1): Linear(in_features=64, out_features=64, bias=True)
+      (linear2): Linear(in_features=64, out_features=64, bias=True)
+      (layer_norm2): LayerNorm((64,), eps=1e-05, elementwise_affine=True)
+      (dropout2): Dropout(p=0, inplace=False)
+    )
+  )
+)
+INFO:root:Namespace(model_name='SASRec')
+INFO:root:--------------------------------------------- BEGIN: 2021-04-15 23:38:36 ---------------------------------------------
+INFO:root:
+=================================
+ Arguments       | Values        
+=================================
+ batch_size      | 64           
+ buffer          | 1            
+ dataset         | RealRecord   
+ dropout         | 0            
+ early_stop      | 10           
+ emb_size        | 64           
+ epoch           | 100          
+ eval_batch_size | 16           
+ gpu             | 0            
+ history_max     | 20           
+ l2              | 1e-06        
+ load            | 0            
+ lr              | 0.0001       
+ metric          | ["NDCG","HR"]
+ num_heads       | 1            
+ num_layers      | 1            
+ num_neg         | 2            
+ num_workers     | 0            
+ optimizer       | Adam         
+ random_seed     | 2021         
+ topk            | [10,20]      
+=================================
+INFO:root:cuda available: False
+INFO:root:# cuda devices: 0
+INFO:root:#params: 580096
+INFO:root:SASRec(
+  (i_embeddings): Embedding(8714, 64)
+  (p_embeddings): Embedding(21, 64)
+  (transformer_block): ModuleList(
+    (0): TransformerLayer(
+      (masked_attn_head): MultiHeadAttention(
+        (q_linear): Linear(in_features=64, out_features=64, bias=True)
+        (k_linear): Linear(in_features=64, out_features=64, bias=True)
+        (v_linear): Linear(in_features=64, out_features=64, bias=True)
+      )
+      (layer_norm1): LayerNorm((64,), eps=1e-05, elementwise_affine=True)
+      (dropout1): Dropout(p=0, inplace=False)
+      (linear1): Linear(in_features=64, out_features=64, bias=True)
+      (linear2): Linear(in_features=64, out_features=64, bias=True)
+      (layer_norm2): LayerNorm((64,), eps=1e-05, elementwise_affine=True)
+      (dropout2): Dropout(p=0, inplace=False)
+    )
+  )
+)
+INFO:root:Namespace(model_name='SASRec')
+INFO:root:--------------------------------------------- BEGIN: 2021-04-15 23:40:39 ---------------------------------------------
+INFO:root:
+=================================
+ Arguments       | Values        
+=================================
+ batch_size      | 64           
+ buffer          | 1            
+ dataset         | RealRecord   
+ dropout         | 0            
+ early_stop      | 10           
+ emb_size        | 64           
+ epoch           | 100          
+ eval_batch_size | 16           
+ gpu             | 0            
+ history_max     | 20           
+ l2              | 1e-06        
+ load            | 0            
+ lr              | 0.0001       
+ metric          | ["NDCG","HR"]
+ num_heads       | 1            
+ num_layers      | 1            
+ num_neg         | 2            
+ num_workers     | 0            
+ optimizer       | Adam         
+ random_seed     | 2021         
+ topk            | [10,20]      
+=================================
+INFO:root:cuda available: False
+INFO:root:# cuda devices: 0
+INFO:root:#params: 580096
+INFO:root:SASRec(
+  (i_embeddings): Embedding(8714, 64)
+  (p_embeddings): Embedding(21, 64)
+  (transformer_block): ModuleList(
+    (0): TransformerLayer(
+      (masked_attn_head): MultiHeadAttention(
+        (q_linear): Linear(in_features=64, out_features=64, bias=True)
+        (k_linear): Linear(in_features=64, out_features=64, bias=True)
+        (v_linear): Linear(in_features=64, out_features=64, bias=True)
+      )
+      (layer_norm1): LayerNorm((64,), eps=1e-05, elementwise_affine=True)
+      (dropout1): Dropout(p=0, inplace=False)
+      (linear1): Linear(in_features=64, out_features=64, bias=True)
+      (linear2): Linear(in_features=64, out_features=64, bias=True)
+      (layer_norm2): LayerNorm((64,), eps=1e-05, elementwise_affine=True)
+      (dropout2): Dropout(p=0, inplace=False)
+    )
+  )
+)
+INFO:root:Namespace(model_name='SASRec')
+INFO:root:--------------------------------------------- BEGIN: 2021-04-15 23:48:14 ---------------------------------------------
+INFO:root:
+=================================
+ Arguments       | Values        
+=================================
+ batch_size      | 64           
+ buffer          | 1            
+ dataset         | RealRecord   
+ dropout         | 0            
+ early_stop      | 10           
+ emb_size        | 64           
+ epoch           | 100          
+ eval_batch_size | 16           
+ gpu             | 0            
+ history_max     | 20           
+ l2              | 1e-06        
+ load            | 0            
+ lr              | 0.0001       
+ metric          | ["NDCG","HR"]
+ num_heads       | 1            
+ num_layers      | 1            
+ num_neg         | 2            
+ num_workers     | 0            
+ optimizer       | Adam         
+ random_seed     | 2021         
+ topk            | [10,20]      
+=================================
+INFO:root:cuda available: False
+INFO:root:# cuda devices: 0
+INFO:root:#params: 580096
+INFO:root:SASRec(
+  (i_embeddings): Embedding(8714, 64)
+  (p_embeddings): Embedding(21, 64)
+  (transformer_block): ModuleList(
+    (0): TransformerLayer(
+      (masked_attn_head): MultiHeadAttention(
+        (q_linear): Linear(in_features=64, out_features=64, bias=True)
+        (k_linear): Linear(in_features=64, out_features=64, bias=True)
+        (v_linear): Linear(in_features=64, out_features=64, bias=True)
+      )
+      (layer_norm1): LayerNorm((64,), eps=1e-05, elementwise_affine=True)
+      (dropout1): Dropout(p=0, inplace=False)
+      (linear1): Linear(in_features=64, out_features=64, bias=True)
+      (linear2): Linear(in_features=64, out_features=64, bias=True)
+      (layer_norm2): LayerNorm((64,), eps=1e-05, elementwise_affine=True)
+      (dropout2): Dropout(p=0, inplace=False)
+    )
+  )
+)
+INFO:root:Namespace(model_name='SASRec')
+INFO:root:--------------------------------------------- BEGIN: 2021-04-15 23:48:52 ---------------------------------------------
+INFO:root:
+=================================
+ Arguments       | Values        
+=================================
+ batch_size      | 64           
+ buffer          | 1            
+ dataset         | RealRecord   
+ dropout         | 0            
+ early_stop      | 10           
+ emb_size        | 64           
+ epoch           | 100          
+ eval_batch_size | 16           
+ gpu             | 0            
+ history_max     | 20           
+ l2              | 1e-06        
+ load            | 0            
+ lr              | 0.0001       
+ metric          | ["NDCG","HR"]
+ num_heads       | 1            
+ num_layers      | 1            
+ num_neg         | 2            
+ num_workers     | 0            
+ optimizer       | Adam         
+ random_seed     | 2021         
+ topk            | [10,20]      
+=================================
+INFO:root:cuda available: False
+INFO:root:# cuda devices: 0
+INFO:root:#params: 580096
+INFO:root:SASRec(
+  (i_embeddings): Embedding(8714, 64)
+  (p_embeddings): Embedding(21, 64)
+  (transformer_block): ModuleList(
+    (0): TransformerLayer(
+      (masked_attn_head): MultiHeadAttention(
+        (q_linear): Linear(in_features=64, out_features=64, bias=True)
+        (k_linear): Linear(in_features=64, out_features=64, bias=True)
+        (v_linear): Linear(in_features=64, out_features=64, bias=True)
+      )
+      (layer_norm1): LayerNorm((64,), eps=1e-05, elementwise_affine=True)
+      (dropout1): Dropout(p=0, inplace=False)
+      (linear1): Linear(in_features=64, out_features=64, bias=True)
+      (linear2): Linear(in_features=64, out_features=64, bias=True)
+      (layer_norm2): LayerNorm((64,), eps=1e-05, elementwise_affine=True)
+      (dropout2): Dropout(p=0, inplace=False)
+    )
+  )
+)
+INFO:root:Namespace(model_name='SASRec')
+INFO:root:--------------------------------------------- BEGIN: 2021-04-15 23:50:51 ---------------------------------------------
+INFO:root:
+=================================
+ Arguments       | Values        
+=================================
+ batch_size      | 64           
+ buffer          | 1            
+ dataset         | RealRecord   
+ dropout         | 0            
+ early_stop      | 10           
+ emb_size        | 64           
+ epoch           | 100          
+ eval_batch_size | 16           
+ gpu             | 0            
+ history_max     | 20           
+ l2              | 1e-06        
+ load            | 0            
+ lr              | 0.0001       
+ metric          | ["NDCG","HR"]
+ num_heads       | 1            
+ num_layers      | 1            
+ num_neg         | 2            
+ num_workers     | 0            
+ optimizer       | Adam         
+ random_seed     | 2021         
+ topk            | [10,20]      
+=================================
+INFO:root:cuda available: False
+INFO:root:# cuda devices: 0
+INFO:root:#params: 580096
+INFO:root:SASRec(
+  (i_embeddings): Embedding(8714, 64)
+  (p_embeddings): Embedding(21, 64)
+  (transformer_block): ModuleList(
+    (0): TransformerLayer(
+      (masked_attn_head): MultiHeadAttention(
+        (q_linear): Linear(in_features=64, out_features=64, bias=True)
+        (k_linear): Linear(in_features=64, out_features=64, bias=True)
+        (v_linear): Linear(in_features=64, out_features=64, bias=True)
+      )
+      (layer_norm1): LayerNorm((64,), eps=1e-05, elementwise_affine=True)
+      (dropout1): Dropout(p=0, inplace=False)
+      (linear1): Linear(in_features=64, out_features=64, bias=True)
+      (linear2): Linear(in_features=64, out_features=64, bias=True)
+      (layer_norm2): LayerNorm((64,), eps=1e-05, elementwise_affine=True)
+      (dropout2): Dropout(p=0, inplace=False)
+    )
+  )
+)
+INFO:root:Namespace(model_name='SASRec')
+INFO:root:--------------------------------------------- BEGIN: 2021-04-15 23:53:45 ---------------------------------------------
+INFO:root:
+=================================
+ Arguments       | Values        
+=================================
+ batch_size      | 64           
+ buffer          | 1            
+ dataset         | RealRecord   
+ dropout         | 0            
+ early_stop      | 10           
+ emb_size        | 64           
+ epoch           | 100          
+ eval_batch_size | 16           
+ gpu             | 0            
+ history_max     | 20           
+ l2              | 1e-06        
+ load            | 0            
+ lr              | 0.0001       
+ metric          | ["NDCG","HR"]
+ num_heads       | 1            
+ num_layers      | 1            
+ num_neg         | 2            
+ num_workers     | 0            
+ optimizer       | Adam         
+ random_seed     | 2021         
+ topk            | [10,20]      
+=================================
+INFO:root:cuda available: False
+INFO:root:# cuda devices: 0
+INFO:root:#params: 580096
+INFO:root:SASRec(
+  (i_embeddings): Embedding(8714, 64)
+  (p_embeddings): Embedding(21, 64)
+  (transformer_block): ModuleList(
+    (0): TransformerLayer(
+      (masked_attn_head): MultiHeadAttention(
+        (q_linear): Linear(in_features=64, out_features=64, bias=True)
+        (k_linear): Linear(in_features=64, out_features=64, bias=True)
+        (v_linear): Linear(in_features=64, out_features=64, bias=True)
+      )
+      (layer_norm1): LayerNorm((64,), eps=1e-05, elementwise_affine=True)
+      (dropout1): Dropout(p=0, inplace=False)
+      (linear1): Linear(in_features=64, out_features=64, bias=True)
+      (linear2): Linear(in_features=64, out_features=64, bias=True)
+      (layer_norm2): LayerNorm((64,), eps=1e-05, elementwise_affine=True)
+      (dropout2): Dropout(p=0, inplace=False)
+    )
+  )
+)
+INFO:root:Namespace(model_name='SASRec')
+INFO:root:--------------------------------------------- BEGIN: 2021-04-15 23:56:45 ---------------------------------------------
+INFO:root:
+=================================
+ Arguments       | Values        
+=================================
+ batch_size      | 64           
+ buffer          | 1            
+ dataset         | RealRecord   
+ dropout         | 0            
+ early_stop      | 10           
+ emb_size        | 64           
+ epoch           | 100          
+ eval_batch_size | 16           
+ gpu             | 0            
+ history_max     | 20           
+ l2              | 1e-06        
+ load            | 0            
+ lr              | 0.0001       
+ metric          | ["NDCG","HR"]
+ num_heads       | 1            
+ num_layers      | 1            
+ num_neg         | 2            
+ num_workers     | 0            
+ optimizer       | Adam         
+ random_seed     | 2021         
+ topk            | [10,20]      
+=================================
+INFO:root:cuda available: False
+INFO:root:# cuda devices: 0
+INFO:root:#params: 580096
+INFO:root:SASRec(
+  (i_embeddings): Embedding(8714, 64)
+  (p_embeddings): Embedding(21, 64)
+  (transformer_block): ModuleList(
+    (0): TransformerLayer(
+      (masked_attn_head): MultiHeadAttention(
+        (q_linear): Linear(in_features=64, out_features=64, bias=True)
+        (k_linear): Linear(in_features=64, out_features=64, bias=True)
+        (v_linear): Linear(in_features=64, out_features=64, bias=True)
+      )
+      (layer_norm1): LayerNorm((64,), eps=1e-05, elementwise_affine=True)
+      (dropout1): Dropout(p=0, inplace=False)
+      (linear1): Linear(in_features=64, out_features=64, bias=True)
+      (linear2): Linear(in_features=64, out_features=64, bias=True)
+      (layer_norm2): LayerNorm((64,), eps=1e-05, elementwise_affine=True)
+      (dropout2): Dropout(p=0, inplace=False)
+    )
+  )
+)
+INFO:root:Namespace(model_name='SASRec')
+INFO:root:--------------------------------------------- BEGIN: 2021-04-15 23:58:44 ---------------------------------------------
+INFO:root:
+=================================
+ Arguments       | Values        
+=================================
+ batch_size      | 64           
+ buffer          | 1            
+ dataset         | RealRecord   
+ dropout         | 0            
+ early_stop      | 10           
+ emb_size        | 64           
+ epoch           | 100          
+ eval_batch_size | 16           
+ gpu             | 0            
+ history_max     | 20           
+ l2              | 1e-06        
+ load            | 0            
+ lr              | 0.0001       
+ metric          | ["NDCG","HR"]
+ num_heads       | 1            
+ num_layers      | 1            
+ num_neg         | 2            
+ num_workers     | 0            
+ optimizer       | Adam         
+ random_seed     | 2021         
+ topk            | [10,20]      
+=================================
+INFO:root:cuda available: False
+INFO:root:# cuda devices: 0
+INFO:root:#params: 580096
+INFO:root:SASRec(
+  (i_embeddings): Embedding(8714, 64)
+  (p_embeddings): Embedding(21, 64)
+  (transformer_block): ModuleList(
+    (0): TransformerLayer(
+      (masked_attn_head): MultiHeadAttention(
+        (q_linear): Linear(in_features=64, out_features=64, bias=True)
+        (k_linear): Linear(in_features=64, out_features=64, bias=True)
+        (v_linear): Linear(in_features=64, out_features=64, bias=True)
+      )
+      (layer_norm1): LayerNorm((64,), eps=1e-05, elementwise_affine=True)
+      (dropout1): Dropout(p=0, inplace=False)
+      (linear1): Linear(in_features=64, out_features=64, bias=True)
+      (linear2): Linear(in_features=64, out_features=64, bias=True)
+      (layer_norm2): LayerNorm((64,), eps=1e-05, elementwise_affine=True)
+      (dropout2): Dropout(p=0, inplace=False)
+    )
+  )
+)
+INFO:root:Namespace(model_name='SASRec')
+INFO:root:--------------------------------------------- BEGIN: 2021-04-16 00:03:58 ---------------------------------------------
+INFO:root:
+=================================
+ Arguments       | Values        
+=================================
+ batch_size      | 64           
+ buffer          | 1            
+ dataset         | RealRecord   
+ dropout         | 0            
+ early_stop      | 10           
+ emb_size        | 64           
+ epoch           | 100          
+ eval_batch_size | 16           
+ gpu             | 0            
+ history_max     | 20           
+ l2              | 1e-06        
+ load            | 0            
+ lr              | 0.0001       
+ metric          | ["NDCG","HR"]
+ num_heads       | 1            
+ num_layers      | 1            
+ num_neg         | 2            
+ num_workers     | 0            
+ optimizer       | Adam         
+ random_seed     | 2021         
+ topk            | [10,20]      
+=================================
+INFO:root:cuda available: False
+INFO:root:# cuda devices: 0
+INFO:root:#params: 580096
+INFO:root:SASRec(
+  (i_embeddings): Embedding(8714, 64)
+  (p_embeddings): Embedding(21, 64)
+  (transformer_block): ModuleList(
+    (0): TransformerLayer(
+      (masked_attn_head): MultiHeadAttention(
+        (q_linear): Linear(in_features=64, out_features=64, bias=True)
+        (k_linear): Linear(in_features=64, out_features=64, bias=True)
+        (v_linear): Linear(in_features=64, out_features=64, bias=True)
+      )
+      (layer_norm1): LayerNorm((64,), eps=1e-05, elementwise_affine=True)
+      (dropout1): Dropout(p=0, inplace=False)
+      (linear1): Linear(in_features=64, out_features=64, bias=True)
+      (linear2): Linear(in_features=64, out_features=64, bias=True)
+      (layer_norm2): LayerNorm((64,), eps=1e-05, elementwise_affine=True)
+      (dropout2): Dropout(p=0, inplace=False)
+    )
+  )
+)
+INFO:root:topk10的推荐结果为[7889, 4381, 8417, 593, 3048, 7155, 7711, 611, 911, 2753]
+INFO:root:Namespace(model_name='SASRec')
+INFO:root:--------------------------------------------- BEGIN: 2021-04-16 00:04:57 ---------------------------------------------
+INFO:root:
+=================================
+ Arguments       | Values        
+=================================
+ batch_size      | 64           
+ buffer          | 1            
+ dataset         | RealRecord   
+ dropout         | 0            
+ early_stop      | 10           
+ emb_size        | 64           
+ epoch           | 100          
+ eval_batch_size | 16           
+ gpu             | 0            
+ history_max     | 20           
+ l2              | 1e-06        
+ load            | 0            
+ lr              | 0.0001       
+ metric          | ["NDCG","HR"]
+ num_heads       | 1            
+ num_layers      | 1            
+ num_neg         | 2            
+ num_workers     | 0            
+ optimizer       | Adam         
+ random_seed     | 2021         
+ topk            | [10,20]      
+=================================
+INFO:root:cuda available: False
+INFO:root:# cuda devices: 0
+INFO:root:#params: 580096
+INFO:root:SASRec(
+  (i_embeddings): Embedding(8714, 64)
+  (p_embeddings): Embedding(21, 64)
+  (transformer_block): ModuleList(
+    (0): TransformerLayer(
+      (masked_attn_head): MultiHeadAttention(
+        (q_linear): Linear(in_features=64, out_features=64, bias=True)
+        (k_linear): Linear(in_features=64, out_features=64, bias=True)
+        (v_linear): Linear(in_features=64, out_features=64, bias=True)
+      )
+      (layer_norm1): LayerNorm((64,), eps=1e-05, elementwise_affine=True)
+      (dropout1): Dropout(p=0, inplace=False)
+      (linear1): Linear(in_features=64, out_features=64, bias=True)
+      (linear2): Linear(in_features=64, out_features=64, bias=True)
+      (layer_norm2): LayerNorm((64,), eps=1e-05, elementwise_affine=True)
+      (dropout2): Dropout(p=0, inplace=False)
+    )
+  )
+)
+INFO:root:topk10的推荐结果为：[7889, 4381, 8417, 593, 3048, 7155, 7711, 611, 911, 2753]
+INFO:root:Namespace(model_name='SASRec')
+INFO:root:--------------------------------------------- BEGIN: 2021-04-16 00:28:53 ---------------------------------------------
+INFO:root:
+=================================
+ Arguments       | Values        
+=================================
+ batch_size      | 64           
+ buffer          | 1            
+ dataset         | RealRecord   
+ dropout         | 0            
+ early_stop      | 10           
+ emb_size        | 64           
+ epoch           | 100          
+ eval_batch_size | 16           
+ gpu             | 0            
+ history_max     | 20           
+ l2              | 1e-06        
+ load            | 0            
+ lr              | 0.0001       
+ metric          | ["NDCG","HR"]
+ num_heads       | 1            
+ num_layers      | 1            
+ num_neg         | 2            
+ num_workers     | 0            
+ optimizer       | Adam         
+ random_seed     | 2021         
+ topk            | [10,20]      
+=================================
+INFO:root:cuda available: False
+INFO:root:# cuda devices: 0
+INFO:root:Reading data from "../data/", dataset = "RealRecord" 
+INFO:root:Counting dataset statistics...
+INFO:root:"# user": 14682, "# item": 8714, "# entry": 151254
+INFO:root:Appending history info...
+INFO:root:Save corpus to ../data/RealRecord\BaseReader.pkl
+INFO:root:#params: 580096
+INFO:root:SASRec(
+  (i_embeddings): Embedding(8714, 64)
+  (p_embeddings): Embedding(21, 64)
+  (transformer_block): ModuleList(
+    (0): TransformerLayer(
+      (masked_attn_head): MultiHeadAttention(
+        (q_linear): Linear(in_features=64, out_features=64, bias=True)
+        (k_linear): Linear(in_features=64, out_features=64, bias=True)
+        (v_linear): Linear(in_features=64, out_features=64, bias=True)
+      )
+      (layer_norm1): LayerNorm((64,), eps=1e-05, elementwise_affine=True)
+      (dropout1): Dropout(p=0, inplace=False)
+      (linear1): Linear(in_features=64, out_features=64, bias=True)
+      (linear2): Linear(in_features=64, out_features=64, bias=True)
+      (layer_norm2): LayerNorm((64,), eps=1e-05, elementwise_affine=True)
+      (dropout2): Dropout(p=0, inplace=False)
+    )
+  )
+)
+INFO:root:Test Before Training: (HR@10:0.1050,HR@20:0.2059,NDCG@10:0.0465,NDCG@20:0.0717)
+INFO:root:Optimizer: Adam
+INFO:root:Epoch 1     loss=0.6125 [123.2 s]	 dev=(HR@10:0.4150,NDCG@10:0.2387) test=(HR@10:0.3828,NDCG@10:0.2209) [13.5 s] 
+INFO:root:Save model to ../model/SASRec/SASRec__RealRecord__2021__epoch=10...
+INFO:root:Epoch 2     loss=0.4970 [111.4 s]	 dev=(HR@10:0.4355,NDCG@10:0.2565) test=(HR@10:0.4151,NDCG@10:0.2474) [15.2 s] 
+INFO:root:Save model to ../model/SASRec/SASRec__RealRecord__2021__epoch=10...
+INFO:root:Namespace(model_name='SASRec')
+INFO:root:--------------------------------------------- BEGIN: 2021-04-16 00:35:56 ---------------------------------------------
+INFO:root:
+=================================
+ Arguments       | Values        
+=================================
+ batch_size      | 64           
+ buffer          | 1            
+ dataset         | RealRecord   
+ dropout         | 0            
+ early_stop      | 10           
+ emb_size        | 64           
+ epoch           | 100          
+ eval_batch_size | 16           
+ gpu             | 0            
+ history_max     | 20           
+ l2              | 1e-06        
+ load            | 0            
+ lr              | 0.0001       
+ metric          | ["NDCG","HR"]
+ num_heads       | 1            
+ num_layers      | 1            
+ num_neg         | 2            
+ num_workers     | 0            
+ optimizer       | Adam         
+ random_seed     | 2021         
+ topk            | [10,20]      
+=================================
+INFO:root:cuda available: False
+INFO:root:# cuda devices: 0
+INFO:root:Reading data from "../data/", dataset = "RealRecord" 
+INFO:root:Counting dataset statistics...
+INFO:root:"# user": 14682, "# item": 8714, "# entry": 151254
+INFO:root:Appending history info...
+INFO:root:Save corpus to ../data/RealRecord\BaseReader.pkl
+INFO:root:#params: 580096
+INFO:root:SASRec(
+  (i_embeddings): Embedding(8714, 64)
+  (p_embeddings): Embedding(21, 64)
+  (transformer_block): ModuleList(
+    (0): TransformerLayer(
+      (masked_attn_head): MultiHeadAttention(
+        (q_linear): Linear(in_features=64, out_features=64, bias=True)
+        (k_linear): Linear(in_features=64, out_features=64, bias=True)
+        (v_linear): Linear(in_features=64, out_features=64, bias=True)
+      )
+      (layer_norm1): LayerNorm((64,), eps=1e-05, elementwise_affine=True)
+      (dropout1): Dropout(p=0, inplace=False)
+      (linear1): Linear(in_features=64, out_features=64, bias=True)
+      (linear2): Linear(in_features=64, out_features=64, bias=True)
+      (layer_norm2): LayerNorm((64,), eps=1e-05, elementwise_affine=True)
+      (dropout2): Dropout(p=0, inplace=False)
+    )
+  )
+)
+INFO:root:Test Before Training: (HR@10:0.1050,HR@20:0.2059,NDCG@10:0.0465,NDCG@20:0.0717)
+INFO:root:Optimizer: Adam
+INFO:root:Epoch 1     loss=0.6125 [113.3 s]	 dev=(HR@10:0.4150,NDCG@10:0.2387) test=(HR@10:0.3828,NDCG@10:0.2209) [11.2 s] 
+INFO:root:Save model to ../model/SASRec/SASRec__RealRecord__2021__epoch=10...
+INFO:root:Epoch 2     loss=0.4970 [120.1 s]	 dev=(HR@10:0.4355,NDCG@10:0.2565) test=(HR@10:0.4151,NDCG@10:0.2474) [14.0 s] 
+INFO:root:Save model to ../model/SASRec/SASRec__RealRecord__2021__epoch=10...
+INFO:root:Namespace(model_name='SASRec')
+INFO:root:--------------------------------------------- BEGIN: 2021-04-16 00:43:07 ---------------------------------------------
+INFO:root:
+=================================
+ Arguments       | Values        
+=================================
+ batch_size      | 64           
+ buffer          | 1            
+ dataset         | RealRecord   
+ dropout         | 0            
+ early_stop      | 10           
+ emb_size        | 64           
+ epoch           | 100          
+ eval_batch_size | 16           
+ gpu             | 0            
+ history_max     | 20           
+ l2              | 1e-06        
+ load            | 0            
+ lr              | 0.0001       
+ metric          | ["NDCG","HR"]
+ num_heads       | 1            
+ num_layers      | 1            
+ num_neg         | 2            
+ num_workers     | 0            
+ optimizer       | Adam         
+ random_seed     | 2021         
+ topk            | [10,20]      
+=================================
+INFO:root:cuda available: False
+INFO:root:# cuda devices: 0
+INFO:root:Reading data from "../data/", dataset = "RealRecord" 
+INFO:root:Counting dataset statistics...
+INFO:root:"# user": 14682, "# item": 8714, "# entry": 151254
+INFO:root:Appending history info...
+INFO:root:Save corpus to ../data/RealRecord\BaseReader.pkl
+INFO:root:#params: 580096
+INFO:root:SASRec(
+  (i_embeddings): Embedding(8714, 64)
+  (p_embeddings): Embedding(21, 64)
+  (transformer_block): ModuleList(
+    (0): TransformerLayer(
+      (masked_attn_head): MultiHeadAttention(
+        (q_linear): Linear(in_features=64, out_features=64, bias=True)
+        (k_linear): Linear(in_features=64, out_features=64, bias=True)
+        (v_linear): Linear(in_features=64, out_features=64, bias=True)
+      )
+      (layer_norm1): LayerNorm((64,), eps=1e-05, elementwise_affine=True)
+      (dropout1): Dropout(p=0, inplace=False)
+      (linear1): Linear(in_features=64, out_features=64, bias=True)
+      (linear2): Linear(in_features=64, out_features=64, bias=True)
+      (layer_norm2): LayerNorm((64,), eps=1e-05, elementwise_affine=True)
+      (dropout2): Dropout(p=0, inplace=False)
+    )
+  )
+)
+INFO:root:Test Before Training: (HR@10:0.1050,HR@20:0.2059,NDCG@10:0.0465,NDCG@20:0.0717)
+INFO:root:Optimizer: Adam
+INFO:root:Epoch 1     loss=0.6125 [100.4 s]	 dev=(HR@10:0.4150,NDCG@10:0.2387) test=(HR@10:0.3828,NDCG@10:0.2209) [11.3 s] 
+INFO:root:Save model to ../model/SASRec/SASRec__RealRecord__2021__epoch=10...

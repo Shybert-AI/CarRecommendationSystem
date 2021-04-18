@@ -1,0 +1,57 @@
+INFO:root:Namespace(model_name='NCF')
+INFO:root:--------------------------------------------- BEGIN: 2021-04-05 18:55:23 ---------------------------------------------
+INFO:root:
+====================================
+ Arguments       | Values           
+====================================
+ batch_size      | 64              
+ buffer          | 1               
+ dataset         | Browsing_History
+ dropout         | 0.2             
+ early_stop      | 5               
+ emb_size        | 64              
+ epoch           | 1               
+ eval_batch_size | 16              
+ gpu             | 0               
+ history_max     | 20              
+ l2              | 1e-07           
+ layers          | [64]            
+ load            | 0               
+ lr              | 0.0005          
+ metric          | ["NDCG","HR"]   
+ num_neg         | 2               
+ num_workers     | 0               
+ optimizer       | Adam            
+ random_seed     | 2021            
+ topk            | [10,20]         
+====================================
+INFO:root:cuda available: False
+INFO:root:# cuda devices: 0
+INFO:root:Reading data from "../data/", dataset = "Browsing_History" 
+INFO:root:Counting dataset statistics...
+INFO:root:"# user": 1001, "# item": 196813, "# entry": 99999
+INFO:root:Appending history info...
+INFO:root:Save corpus to ../data/Browsing_History\BaseReader.pkl
+INFO:root:#params: 25328576
+INFO:root:NCF(
+  (mf_u_embeddings): Embedding(1001, 64)
+  (mf_i_embeddings): Embedding(196813, 64)
+  (mlp_u_embeddings): Embedding(1001, 64)
+  (mlp_i_embeddings): Embedding(196813, 64)
+  (mlp): ModuleList(
+    (0): Linear(in_features=128, out_features=64, bias=True)
+  )
+  (dropout_layer): Dropout(p=0.2, inplace=False)
+  (prediction): Linear(in_features=128, out_features=1, bias=False)
+)
+INFO:root:Test Before Training: (HR@10:0.1046,HR@20:0.2019,NDCG@10:0.0475,NDCG@20:0.0717)
+INFO:root:Optimizer: Adam
+INFO:root:Epoch 1     loss=0.6832 [593.5 s]	 dev=(HR@10:0.0661,NDCG@10:0.0293) test=(HR@10:0.0618,NDCG@10:0.0279) [5.2 s] 
+INFO:root:Save model to ../model/NCF/NCF__Browsing_History__2021__epoch=1_...
+INFO:root:
+Best Iter(dev)=    1	 dev=(HR@10:0.0661,NDCG@10:0.0293) test=(HR@10:0.0618,NDCG@10:0.0279) [598.7 s] 
+INFO:root:Load model from ../model/NCF/NCF__Browsing_History__2021__epoch=1__lr=0.0005__l2=1e-07.pt
+INFO:root:
+Test After Training: (HR@10:0.0618,HR@20:0.1271,NDCG@10:0.0279,NDCG@20:0.0443)
+INFO:root:
+--------------------------------------------- END: 2021-04-05 19:05:42 ---------------------------------------------

@@ -1,0 +1,284 @@
+INFO:root:Namespace(model_name='NCF')
+INFO:root:--------------------------------------------- BEGIN: 2021-04-05 16:12:08 ---------------------------------------------
+INFO:root:
+====================================
+ Arguments       | Values           
+====================================
+ batch_size      | 64              
+ buffer          | 1               
+ dataset         | Browsing_History
+ dropout         | 0.2             
+ early_stop      | 5               
+ emb_size        | 64              
+ epoch           | 10              
+ eval_batch_size | 16              
+ gpu             | 0               
+ history_max     | 20              
+ l2              | 1e-07           
+ layers          | [64]            
+ load            | 0               
+ lr              | 0.0005          
+ metric          | ["NDCG","HR"]   
+ num_neg         | 2               
+ num_workers     | 0               
+ optimizer       | Adam            
+ random_seed     | 2021            
+ topk            | [5,10]          
+====================================
+INFO:root:cuda available: False
+INFO:root:# cuda devices: 0
+INFO:root:Reading data from "../data/", dataset = "Browsing_History" 
+INFO:root:Counting dataset statistics...
+INFO:root:"# user": 1001, "# item": 196813, "# entry": 99999
+INFO:root:Appending history info...
+INFO:root:Save corpus to ../data/Browsing_History\BaseReader.pkl
+INFO:root:#params: 25328576
+INFO:root:NCF(
+  (mf_u_embeddings): Embedding(1001, 64)
+  (mf_i_embeddings): Embedding(196813, 64)
+  (mlp_u_embeddings): Embedding(1001, 64)
+  (mlp_i_embeddings): Embedding(196813, 64)
+  (mlp): ModuleList(
+    (0): Linear(in_features=128, out_features=64, bias=True)
+  )
+  (dropout_layer): Dropout(p=0.2, inplace=False)
+  (prediction): Linear(in_features=128, out_features=1, bias=False)
+)
+INFO:root:Test Before Training: (HR@10:0.1046,HR@5:0.0515,NDCG@10:0.0475,NDCG@5:0.0306)
+INFO:root:Optimizer: Adam
+INFO:root:Epoch 1     loss=0.6832 [580.4 s]	 dev=(HR@5:0.0323,NDCG@5:0.0185) test=(HR@5:0.0311,NDCG@5:0.0182) [5.1 s] 
+INFO:root:Save model to ../model/NCF/NCF__Browsing_History__2021__epoch=10...
+INFO:root:Epoch 2     loss=0.5571 [581.5 s]	 dev=(HR@5:0.0311,NDCG@5:0.0181) test=(HR@5:0.0303,NDCG@5:0.0177) [4.9 s] 
+INFO:root:Epoch 3     loss=0.4165 [582.5 s]	 dev=(HR@5:0.0299,NDCG@5:0.0172) test=(HR@5:0.0335,NDCG@5:0.0199) [4.9 s] 
+INFO:root:Epoch 4     loss=0.2599 [589.3 s]	 dev=(HR@5:0.0318,NDCG@5:0.0188) test=(HR@5:0.0337,NDCG@5:0.0201) [5.1 s] 
+INFO:root:Save model to ../model/NCF/NCF__Browsing_History__2021__epoch=10...
+INFO:root:Epoch 5     loss=0.1370 [609.0 s]	 dev=(HR@5:0.0341,NDCG@5:0.0195) test=(HR@5:0.0329,NDCG@5:0.0197) [5.1 s] 
+INFO:root:Save model to ../model/NCF/NCF__Browsing_History__2021__epoch=10...
+INFO:root:Epoch 6     loss=0.0656 [594.1 s]	 dev=(HR@5:0.0307,NDCG@5:0.0183) test=(HR@5:0.0337,NDCG@5:0.0201) [5.2 s] 
+INFO:root:Epoch 7     loss=0.0305 [597.8 s]	 dev=(HR@5:0.0311,NDCG@5:0.0181) test=(HR@5:0.0323,NDCG@5:0.0195) [5.3 s] 
+INFO:root:Epoch 8     loss=0.0152 [600.3 s]	 dev=(HR@5:0.0300,NDCG@5:0.0183) test=(HR@5:0.0334,NDCG@5:0.0198) [5.3 s] 
+INFO:root:Epoch 9     loss=0.0079 [591.8 s]	 dev=(HR@5:0.0311,NDCG@5:0.0184) test=(HR@5:0.0320,NDCG@5:0.0195) [5.2 s] 
+INFO:root:Namespace(model_name='NCF')
+INFO:root:--------------------------------------------- BEGIN: 2021-04-05 17:42:56 ---------------------------------------------
+INFO:root:
+====================================
+ Arguments       | Values           
+====================================
+ batch_size      | 64              
+ buffer          | 1               
+ dataset         | Browsing_History
+ dropout         | 0.2             
+ early_stop      | 5               
+ emb_size        | 64              
+ epoch           | 10              
+ eval_batch_size | 16              
+ gpu             | 0               
+ history_max     | 20              
+ l2              | 1e-07           
+ layers          | [64]            
+ load            | 0               
+ lr              | 0.0005          
+ metric          | ["NDCG","HR"]   
+ num_neg         | 2               
+ num_workers     | 0               
+ optimizer       | Adam            
+ random_seed     | 2021            
+ topk            | [5,10]          
+====================================
+INFO:root:cuda available: False
+INFO:root:# cuda devices: 0
+INFO:root:Reading data from "../data/", dataset = "Browsing_History" 
+INFO:root:Counting dataset statistics...
+INFO:root:"# user": 1001, "# item": 196813, "# entry": 99999
+INFO:root:Appending history info...
+INFO:root:Save corpus to ../data/Browsing_History\BaseReader.pkl
+INFO:root:#params: 25328576
+INFO:root:NCF(
+  (mf_u_embeddings): Embedding(1001, 64)
+  (mf_i_embeddings): Embedding(196813, 64)
+  (mlp_u_embeddings): Embedding(1001, 64)
+  (mlp_i_embeddings): Embedding(196813, 64)
+  (mlp): ModuleList(
+    (0): Linear(in_features=128, out_features=64, bias=True)
+  )
+  (dropout_layer): Dropout(p=0.2, inplace=False)
+  (prediction): Linear(in_features=128, out_features=1, bias=False)
+)
+INFO:root:Test Before Training: (HR@10:0.1046,HR@5:0.0515,NDCG@10:0.0475,NDCG@5:0.0306)
+INFO:root:Optimizer: Adam
+INFO:root:Epoch 1     loss=0.6832 [708.3 s]	 dev=(HR@5:0.0323,NDCG@5:0.0185) test=(HR@5:0.0311,NDCG@5:0.0182) [5.3 s] 
+INFO:root:Save model to ../model/NCF/NCF__Browsing_History__2021__epoch=10...
+INFO:root:Namespace(model_name='NCF')
+INFO:root:--------------------------------------------- BEGIN: 2021-04-05 18:02:43 ---------------------------------------------
+INFO:root:
+====================================
+ Arguments       | Values           
+====================================
+ batch_size      | 64              
+ buffer          | 1               
+ dataset         | Browsing_History
+ dropout         | 0.2             
+ early_stop      | 5               
+ emb_size        | 64              
+ epoch           | 10              
+ eval_batch_size | 16              
+ gpu             | 0               
+ history_max     | 20              
+ l2              | 1e-07           
+ layers          | [64]            
+ load            | 0               
+ lr              | 0.0005          
+ metric          | ["NDCG","HR"]   
+ num_neg         | 2               
+ num_workers     | 0               
+ optimizer       | Adam            
+ random_seed     | 2021            
+ topk            | [5,10]          
+====================================
+INFO:root:cuda available: False
+INFO:root:# cuda devices: 0
+INFO:root:Namespace(model_name='NCF')
+INFO:root:--------------------------------------------- BEGIN: 2021-04-05 18:03:57 ---------------------------------------------
+INFO:root:
+====================================
+ Arguments       | Values           
+====================================
+ batch_size      | 64              
+ buffer          | 1               
+ dataset         | Browsing_History
+ dropout         | 0.2             
+ early_stop      | 5               
+ emb_size        | 64              
+ epoch           | 10              
+ eval_batch_size | 16              
+ gpu             | 0               
+ history_max     | 20              
+ l2              | 1e-07           
+ layers          | [64]            
+ load            | 0               
+ lr              | 0.0005          
+ metric          | ["NDCG","HR"]   
+ num_neg         | 2               
+ num_workers     | 0               
+ optimizer       | Adam            
+ random_seed     | 2021            
+ topk            | [10,20]         
+====================================
+INFO:root:cuda available: False
+INFO:root:# cuda devices: 0
+INFO:root:Reading data from "../data/", dataset = "Browsing_History" 
+INFO:root:Counting dataset statistics...
+INFO:root:"# user": 1001, "# item": 196813, "# entry": 99999
+INFO:root:Appending history info...
+INFO:root:Save corpus to ../data/Browsing_History\BaseReader.pkl
+INFO:root:#params: 25328576
+INFO:root:NCF(
+  (mf_u_embeddings): Embedding(1001, 64)
+  (mf_i_embeddings): Embedding(196813, 64)
+  (mlp_u_embeddings): Embedding(1001, 64)
+  (mlp_i_embeddings): Embedding(196813, 64)
+  (mlp): ModuleList(
+    (0): Linear(in_features=128, out_features=64, bias=True)
+  )
+  (dropout_layer): Dropout(p=0.2, inplace=False)
+  (prediction): Linear(in_features=128, out_features=1, bias=False)
+)
+INFO:root:Test Before Training: (HR@10:0.1046,HR@20:0.2019,NDCG@10:0.0475,NDCG@20:0.0717)
+INFO:root:Namespace(model_name='NCF')
+INFO:root:--------------------------------------------- BEGIN: 2021-04-05 18:11:28 ---------------------------------------------
+INFO:root:
+====================================
+ Arguments       | Values           
+====================================
+ batch_size      | 64              
+ buffer          | 1               
+ dataset         | Browsing_History
+ dropout         | 0.2             
+ early_stop      | 5               
+ emb_size        | 64              
+ epoch           | 10              
+ eval_batch_size | 16              
+ gpu             | 0               
+ history_max     | 20              
+ l2              | 1e-07           
+ layers          | [64]            
+ load            | 0               
+ lr              | 0.0005          
+ metric          | ["NDCG","HR"]   
+ num_neg         | 2               
+ num_workers     | 0               
+ optimizer       | Adam            
+ random_seed     | 2021            
+ topk            | [10,20]         
+====================================
+INFO:root:cuda available: False
+INFO:root:# cuda devices: 0
+INFO:root:Reading data from "../data/", dataset = "Browsing_History" 
+INFO:root:Counting dataset statistics...
+INFO:root:"# user": 1001, "# item": 196813, "# entry": 99999
+INFO:root:Appending history info...
+INFO:root:Save corpus to ../data/Browsing_History\BaseReader.pkl
+INFO:root:#params: 25328576
+INFO:root:NCF(
+  (mf_u_embeddings): Embedding(1001, 64)
+  (mf_i_embeddings): Embedding(196813, 64)
+  (mlp_u_embeddings): Embedding(1001, 64)
+  (mlp_i_embeddings): Embedding(196813, 64)
+  (mlp): ModuleList(
+    (0): Linear(in_features=128, out_features=64, bias=True)
+  )
+  (dropout_layer): Dropout(p=0.2, inplace=False)
+  (prediction): Linear(in_features=128, out_features=1, bias=False)
+)
+INFO:root:Test Before Training: (HR@10:0.1046,HR@20:0.2019,NDCG@10:0.0475,NDCG@20:0.0717)
+INFO:root:Optimizer: Adam
+INFO:root:Namespace(model_name='NCF')
+INFO:root:--------------------------------------------- BEGIN: 2021-04-05 18:14:36 ---------------------------------------------
+INFO:root:
+====================================
+ Arguments       | Values           
+====================================
+ batch_size      | 64              
+ buffer          | 1               
+ dataset         | Browsing_History
+ dropout         | 0.2             
+ early_stop      | 5               
+ emb_size        | 64              
+ epoch           | 10              
+ eval_batch_size | 16              
+ gpu             | 0               
+ history_max     | 20              
+ l2              | 1e-07           
+ layers          | [64]            
+ load            | 0               
+ lr              | 0.0005          
+ metric          | ["NDCG","HR"]   
+ num_neg         | 2               
+ num_workers     | 0               
+ optimizer       | Adam            
+ random_seed     | 2021            
+ topk            | [10,20]         
+====================================
+INFO:root:cuda available: False
+INFO:root:# cuda devices: 0
+INFO:root:Reading data from "../data/", dataset = "Browsing_History" 
+INFO:root:Counting dataset statistics...
+INFO:root:"# user": 1001, "# item": 196813, "# entry": 99999
+INFO:root:Appending history info...
+INFO:root:Save corpus to ../data/Browsing_History\BaseReader.pkl
+INFO:root:#params: 25328576
+INFO:root:NCF(
+  (mf_u_embeddings): Embedding(1001, 64)
+  (mf_i_embeddings): Embedding(196813, 64)
+  (mlp_u_embeddings): Embedding(1001, 64)
+  (mlp_i_embeddings): Embedding(196813, 64)
+  (mlp): ModuleList(
+    (0): Linear(in_features=128, out_features=64, bias=True)
+  )
+  (dropout_layer): Dropout(p=0.2, inplace=False)
+  (prediction): Linear(in_features=128, out_features=1, bias=False)
+)
+INFO:root:Test Before Training: (HR@10:0.1046,HR@20:0.2019,NDCG@10:0.0475,NDCG@20:0.0717)
+INFO:root:Optimizer: Adam
+INFO:root:Epoch 1     loss=0.6832 [581.4 s]	 dev=(HR@10:0.0661,NDCG@10:0.0293) test=(HR@10:0.0618,NDCG@10:0.0279) [4.9 s] 
+INFO:root:Save model to ../model/NCF/NCF__Browsing_History__2021__epoch=10...

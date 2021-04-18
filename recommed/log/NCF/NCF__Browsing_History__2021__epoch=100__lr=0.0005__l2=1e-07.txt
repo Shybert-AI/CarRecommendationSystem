@@ -1,0 +1,163 @@
+INFO:root:Namespace(model_name='NCF')
+INFO:root:--------------------------------------------- BEGIN: 2021-04-06 00:28:26 ---------------------------------------------
+INFO:root:
+====================================
+ Arguments       | Values           
+====================================
+ batch_size      | 64              
+ buffer          | 1               
+ dataset         | Browsing_History
+ dropout         | 0.2             
+ early_stop      | 5               
+ emb_size        | 64              
+ epoch           | 100             
+ eval_batch_size | 16              
+ gpu             | 0               
+ history_max     | 20              
+ l2              | 1e-07           
+ layers          | [64]            
+ load            | 0               
+ lr              | 0.0005          
+ metric          | ["NDCG","HR"]   
+ num_neg         | 2               
+ num_workers     | 0               
+ optimizer       | Adam            
+ random_seed     | 2021            
+ topk            | [10,20]         
+====================================
+INFO:root:cuda available: False
+INFO:root:# cuda devices: 0
+INFO:root:Reading data from "../data/", dataset = "Browsing_History" 
+INFO:root:Counting dataset statistics...
+INFO:root:"# user": 1001, "# item": 196813, "# entry": 99999
+INFO:root:Appending history info...
+INFO:root:Save corpus to ../data/Browsing_History\BaseReader.pkl
+INFO:root:#params: 25328576
+INFO:root:NCF(
+  (mf_u_embeddings): Embedding(1001, 64)
+  (mf_i_embeddings): Embedding(196813, 64)
+  (mlp_u_embeddings): Embedding(1001, 64)
+  (mlp_i_embeddings): Embedding(196813, 64)
+  (mlp): ModuleList(
+    (0): Linear(in_features=128, out_features=64, bias=True)
+  )
+  (dropout_layer): Dropout(p=0.2, inplace=False)
+  (prediction): Linear(in_features=128, out_features=1, bias=False)
+)
+INFO:root:Test Before Training: (HR@10:0.1046,HR@20:0.2019,NDCG@10:0.0475,NDCG@20:0.0717)
+INFO:root:Optimizer: Adam
+INFO:root:Epoch 1     loss=0.6832 [621.4 s]	 dev=(HR@10:0.0661,NDCG@10:0.0293) test=(HR@10:0.0618,NDCG@10:0.0279) [5.6 s] 
+INFO:root:Save model to ../model/NCF/NCF__Browsing_History__2021__epoch=10...
+INFO:root:Epoch 2     loss=0.5571 [606.3 s]	 dev=(HR@10:0.0631,NDCG@10:0.0283) test=(HR@10:0.0640,NDCG@10:0.0284) [5.2 s] 
+INFO:root:Epoch 3     loss=0.4165 [624.8 s]	 dev=(HR@10:0.0624,NDCG@10:0.0275) test=(HR@10:0.0665,NDCG@10:0.0305) [5.5 s] 
+INFO:root:Epoch 4     loss=0.2599 [638.7 s]	 dev=(HR@10:0.0627,NDCG@10:0.0287) test=(HR@10:0.0681,NDCG@10:0.0311) [5.5 s] 
+INFO:root:Epoch 5     loss=0.1370 [642.6 s]	 dev=(HR@10:0.0654,NDCG@10:0.0295) test=(HR@10:0.0679,NDCG@10:0.0308) [5.4 s] 
+INFO:root:Save model to ../model/NCF/NCF__Browsing_History__2021__epoch=10...
+INFO:root:Epoch 6     loss=0.0656 [633.2 s]	 dev=(HR@10:0.0660,NDCG@10:0.0295) test=(HR@10:0.0663,NDCG@10:0.0305) [5.6 s] 
+INFO:root:Save model to ../model/NCF/NCF__Browsing_History__2021__epoch=10...
+INFO:root:Epoch 7     loss=0.0305 [626.5 s]	 dev=(HR@10:0.0654,NDCG@10:0.0290) test=(HR@10:0.0636,NDCG@10:0.0295) [5.9 s] 
+INFO:root:Epoch 8     loss=0.0152 [624.3 s]	 dev=(HR@10:0.0643,NDCG@10:0.0292) test=(HR@10:0.0640,NDCG@10:0.0295) [5.6 s] 
+INFO:root:Epoch 9     loss=0.0079 [626.5 s]	 dev=(HR@10:0.0640,NDCG@10:0.0289) test=(HR@10:0.0637,NDCG@10:0.0296) [5.5 s] 
+INFO:root:Epoch 10    loss=0.0046 [625.8 s]	 dev=(HR@10:0.0644,NDCG@10:0.0291) test=(HR@10:0.0628,NDCG@10:0.0291) [5.4 s] 
+INFO:root:Epoch 11    loss=0.0026 [655.1 s]	 dev=(HR@10:0.0646,NDCG@10:0.0291) test=(HR@10:0.0637,NDCG@10:0.0292) [5.8 s] 
+INFO:root:Epoch 12    loss=0.0017 [684.6 s]	 dev=(HR@10:0.0645,NDCG@10:0.0287) test=(HR@10:0.0631,NDCG@10:0.0291) [8.1 s] 
+INFO:root:Epoch 13    loss=0.0011 [683.9 s]	 dev=(HR@10:0.0639,NDCG@10:0.0286) test=(HR@10:0.0644,NDCG@10:0.0297) [8.9 s] 
+INFO:root:Epoch 14    loss=0.0007 [673.5 s]	 dev=(HR@10:0.0630,NDCG@10:0.0287) test=(HR@10:0.0638,NDCG@10:0.0294) [9.3 s] 
+INFO:root:Epoch 15    loss=0.0006 [680.1 s]	 dev=(HR@10:0.0640,NDCG@10:0.0289) test=(HR@10:0.0643,NDCG@10:0.0294) [9.9 s] 
+INFO:root:Epoch 16    loss=0.0005 [678.2 s]	 dev=(HR@10:0.0649,NDCG@10:0.0295) test=(HR@10:0.0631,NDCG@10:0.0287) [11.7 s] 
+INFO:root:Save model to ../model/NCF/NCF__Browsing_History__2021__epoch=10...
+INFO:root:Epoch 17    loss=0.0004 [676.2 s]	 dev=(HR@10:0.0634,NDCG@10:0.0292) test=(HR@10:0.0659,NDCG@10:0.0299) [14.1 s] 
+INFO:root:Epoch 18    loss=0.0004 [672.2 s]	 dev=(HR@10:0.0646,NDCG@10:0.0293) test=(HR@10:0.0647,NDCG@10:0.0295) [16.7 s] 
+INFO:root:Epoch 19    loss=0.0003 [677.8 s]	 dev=(HR@10:0.0628,NDCG@10:0.0290) test=(HR@10:0.0643,NDCG@10:0.0292) [19.8 s] 
+INFO:root:Epoch 20    loss=0.0003 [845.9 s]	 dev=(HR@10:0.0641,NDCG@10:0.0293) test=(HR@10:0.0640,NDCG@10:0.0294) [48.1 s] 
+INFO:root:Epoch 21    loss=0.0003 [700.4 s]	 dev=(HR@10:0.0634,NDCG@10:0.0289) test=(HR@10:0.0641,NDCG@10:0.0295) [27.6 s] 
+INFO:root:Epoch 22    loss=0.0003 [709.4 s]	 dev=(HR@10:0.0641,NDCG@10:0.0293) test=(HR@10:0.0648,NDCG@10:0.0294) [30.4 s] 
+INFO:root:Epoch 23    loss=0.0003 [687.1 s]	 dev=(HR@10:0.0629,NDCG@10:0.0292) test=(HR@10:0.0646,NDCG@10:0.0292) [31.6 s] 
+INFO:root:Epoch 24    loss=0.0003 [692.6 s]	 dev=(HR@10:0.0638,NDCG@10:0.0293) test=(HR@10:0.0642,NDCG@10:0.0292) [35.4 s] 
+INFO:root:Epoch 25    loss=0.0003 [705.2 s]	 dev=(HR@10:0.0635,NDCG@10:0.0294) test=(HR@10:0.0653,NDCG@10:0.0298) [37.5 s] 
+INFO:root:Epoch 26    loss=0.0003 [704.7 s]	 dev=(HR@10:0.0638,NDCG@10:0.0293) test=(HR@10:0.0642,NDCG@10:0.0294) [37.7 s] 
+INFO:root:Epoch 27    loss=0.0003 [710.7 s]	 dev=(HR@10:0.0660,NDCG@10:0.0302) test=(HR@10:0.0630,NDCG@10:0.0290) [37.7 s] 
+INFO:root:Save model to ../model/NCF/NCF__Browsing_History__2021__epoch=10...
+INFO:root:Epoch 28    loss=0.0003 [701.5 s]	 dev=(HR@10:0.0656,NDCG@10:0.0298) test=(HR@10:0.0637,NDCG@10:0.0297) [37.7 s] 
+INFO:root:Epoch 29    loss=0.0003 [703.2 s]	 dev=(HR@10:0.0656,NDCG@10:0.0296) test=(HR@10:0.0636,NDCG@10:0.0295) [39.0 s] 
+INFO:root:Epoch 30    loss=0.0003 [701.0 s]	 dev=(HR@10:0.0660,NDCG@10:0.0299) test=(HR@10:0.0648,NDCG@10:0.0299) [36.1 s] 
+INFO:root:Epoch 31    loss=0.0003 [702.7 s]	 dev=(HR@10:0.0647,NDCG@10:0.0297) test=(HR@10:0.0638,NDCG@10:0.0294) [37.2 s] 
+INFO:root:Epoch 32    loss=0.0002 [714.4 s]	 dev=(HR@10:0.0645,NDCG@10:0.0300) test=(HR@10:0.0643,NDCG@10:0.0292) [40.1 s] 
+INFO:root:Epoch 33    loss=0.0003 [715.0 s]	 dev=(HR@10:0.0637,NDCG@10:0.0295) test=(HR@10:0.0664,NDCG@10:0.0302) [37.0 s] 
+INFO:root:Epoch 34    loss=0.0003 [709.3 s]	 dev=(HR@10:0.0634,NDCG@10:0.0291) test=(HR@10:0.0656,NDCG@10:0.0297) [35.5 s] 
+INFO:root:Epoch 35    loss=0.0002 [683.4 s]	 dev=(HR@10:0.0642,NDCG@10:0.0293) test=(HR@10:0.0640,NDCG@10:0.0295) [35.4 s] 
+INFO:root:Epoch 36    loss=0.0002 [667.3 s]	 dev=(HR@10:0.0639,NDCG@10:0.0290) test=(HR@10:0.0645,NDCG@10:0.0297) [35.4 s] 
+INFO:root:Epoch 37    loss=0.0002 [668.3 s]	 dev=(HR@10:0.0623,NDCG@10:0.0286) test=(HR@10:0.0641,NDCG@10:0.0295) [35.4 s] 
+INFO:root:Epoch 38    loss=0.0003 [671.6 s]	 dev=(HR@10:0.0637,NDCG@10:0.0294) test=(HR@10:0.0648,NDCG@10:0.0298) [35.4 s] 
+INFO:root:Epoch 39    loss=0.0002 [685.8 s]	 dev=(HR@10:0.0648,NDCG@10:0.0291) test=(HR@10:0.0624,NDCG@10:0.0289) [35.4 s] 
+INFO:root:Epoch 40    loss=0.0003 [682.0 s]	 dev=(HR@10:0.0646,NDCG@10:0.0290) test=(HR@10:0.0621,NDCG@10:0.0287) [35.4 s] 
+INFO:root:Epoch 41    loss=0.0002 [679.0 s]	 dev=(HR@10:0.0650,NDCG@10:0.0293) test=(HR@10:0.0642,NDCG@10:0.0287) [36.4 s] 
+INFO:root:Epoch 42    loss=0.0002 [687.7 s]	 dev=(HR@10:0.0652,NDCG@10:0.0294) test=(HR@10:0.0631,NDCG@10:0.0287) [36.5 s] 
+INFO:root:Epoch 43    loss=0.0003 [683.1 s]	 dev=(HR@10:0.0657,NDCG@10:0.0298) test=(HR@10:0.0622,NDCG@10:0.0282) [37.0 s] 
+INFO:root:Epoch 44    loss=0.0002 [687.3 s]	 dev=(HR@10:0.0677,NDCG@10:0.0301) test=(HR@10:0.0637,NDCG@10:0.0286) [36.7 s] 
+INFO:root:Epoch 45    loss=0.0003 [688.5 s]	 dev=(HR@10:0.0650,NDCG@10:0.0294) test=(HR@10:0.0639,NDCG@10:0.0290) [37.4 s] 
+INFO:root:Epoch 46    loss=0.0002 [686.2 s]	 dev=(HR@10:0.0638,NDCG@10:0.0289) test=(HR@10:0.0636,NDCG@10:0.0292) [37.1 s] 
+INFO:root:Epoch 47    loss=0.0002 [686.0 s]	 dev=(HR@10:0.0630,NDCG@10:0.0285) test=(HR@10:0.0629,NDCG@10:0.0286) [37.6 s] 
+INFO:root:Early stop at 47 based on dev result.
+INFO:root:
+Best Iter(dev)=   27	 dev=(HR@10:0.0660,NDCG@10:0.0302) test=(HR@10:0.0630,NDCG@10:0.0290) [33095.4 s] 
+INFO:root:Load model from ../model/NCF/NCF__Browsing_History__2021__epoch=100__lr=0.0005__l2=1e-07.pt
+INFO:root:
+Test After Training: (HR@10:0.0630,HR@20:0.1276,NDCG@10:0.0290,NDCG@20:0.0451)
+INFO:root:
+--------------------------------------------- END: 2021-04-06 09:40:40 ---------------------------------------------
+INFO:root:Namespace(model_name='NCF')
+INFO:root:--------------------------------------------- BEGIN: 2021-04-14 19:41:15 ---------------------------------------------
+INFO:root:
+====================================
+ Arguments       | Values           
+====================================
+ batch_size      | 64              
+ buffer          | 1               
+ dataset         | Browsing_History
+ dropout         | 0.2             
+ early_stop      | 10              
+ emb_size        | 64              
+ epoch           | 100             
+ eval_batch_size | 16              
+ gpu             | 0               
+ history_max     | 20              
+ l2              | 1e-07           
+ layers          | [64]            
+ load            | 0               
+ lr              | 0.0005          
+ metric          | ["NDCG","HR"]   
+ num_neg         | 2               
+ num_workers     | 0               
+ optimizer       | Adam            
+ random_seed     | 2021            
+ topk            | [10,20]         
+====================================
+INFO:root:cuda available: False
+INFO:root:# cuda devices: 0
+INFO:root:Reading data from "../data/", dataset = "Browsing_History" 
+INFO:root:Counting dataset statistics...
+INFO:root:"# user": 1001, "# item": 196813, "# entry": 99999
+INFO:root:Appending history info...
+INFO:root:Save corpus to ../data/Browsing_History\BaseReader.pkl
+INFO:root:#params: 25328576
+INFO:root:NCF(
+  (mf_u_embeddings): Embedding(1001, 64)
+  (mf_i_embeddings): Embedding(196813, 64)
+  (mlp_u_embeddings): Embedding(1001, 64)
+  (mlp_i_embeddings): Embedding(196813, 64)
+  (mlp): ModuleList(
+    (0): Linear(in_features=128, out_features=64, bias=True)
+  )
+  (dropout_layer): Dropout(p=0.2, inplace=False)
+  (prediction): Linear(in_features=128, out_features=1, bias=False)
+)
+INFO:root:Test Before Training: (HR@10:0.0975,HR@20:0.1983,NDCG@10:0.0434,NDCG@20:0.0685)
+INFO:root:Optimizer: Adam
+INFO:root:Epoch 1     loss=0.6826 [642.0 s]	 dev=(HR@10:0.0667,NDCG@10:0.0303) test=(HR@10:0.0628,NDCG@10:0.0287) [5.9 s] 
+INFO:root:Save model to ../model/NCF/NCF__Browsing_History__2021__epoch=10...
+INFO:root:Epoch 2     loss=0.5578 [660.6 s]	 dev=(HR@10:0.0640,NDCG@10:0.0294) test=(HR@10:0.0644,NDCG@10:0.0289) [5.7 s] 
+INFO:root:Epoch 3     loss=0.4215 [660.8 s]	 dev=(HR@10:0.0650,NDCG@10:0.0304) test=(HR@10:0.0629,NDCG@10:0.0279) [5.8 s] 
+INFO:root:Save model to ../model/NCF/NCF__Browsing_History__2021__epoch=10...
+INFO:root:Epoch 4     loss=0.2677 [677.7 s]	 dev=(HR@10:0.0692,NDCG@10:0.0316) test=(HR@10:0.0633,NDCG@10:0.0284) [5.7 s] 
+INFO:root:Save model to ../model/NCF/NCF__Browsing_History__2021__epoch=10...

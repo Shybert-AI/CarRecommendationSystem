@@ -1,0 +1,52 @@
+INFO:root:Namespace(model_name='NCF')
+INFO:root:--------------------------------------------- BEGIN: 2021-04-05 15:38:05 ---------------------------------------------
+INFO:root:
+====================================
+ Arguments       | Values           
+====================================
+ batch_size      | 64              
+ buffer          | 1               
+ dataset         | Browsing_History
+ dropout         | 0.2             
+ early_stop      | 5               
+ emb_size        | 64              
+ epoch           | 5               
+ eval_batch_size | 16              
+ gpu             | 0               
+ history_max     | 20              
+ l2              | 1e-07           
+ layers          | [64]            
+ load            | 0               
+ lr              | 0.0005          
+ metric          | ["NDCG","HR"]   
+ num_neg         | 2               
+ num_workers     | 0               
+ optimizer       | Adam            
+ random_seed     | 2021            
+ topk            | [5,10]          
+====================================
+INFO:root:cuda available: False
+INFO:root:# cuda devices: 0
+INFO:root:Reading data from "../data/", dataset = "Browsing_History" 
+INFO:root:Counting dataset statistics...
+INFO:root:"# user": 1001, "# item": 196813, "# entry": 99999
+INFO:root:Appending history info...
+INFO:root:Save corpus to ../data/Browsing_History\BaseReader.pkl
+INFO:root:#params: 25328576
+INFO:root:NCF(
+  (mf_u_embeddings): Embedding(1001, 64)
+  (mf_i_embeddings): Embedding(196813, 64)
+  (mlp_u_embeddings): Embedding(1001, 64)
+  (mlp_i_embeddings): Embedding(196813, 64)
+  (mlp): ModuleList(
+    (0): Linear(in_features=128, out_features=64, bias=True)
+  )
+  (dropout_layer): Dropout(p=0.2, inplace=False)
+  (prediction): Linear(in_features=128, out_features=1, bias=False)
+)
+INFO:root:Test Before Training: (HR@10:0.1046,HR@5:0.0515,NDCG@10:0.0475,NDCG@5:0.0306)
+INFO:root:Optimizer: Adam
+INFO:root:Epoch 1     loss=0.6832 [603.0 s]	 dev=(HR@5:0.0323,NDCG@5:0.0185) test=(HR@5:0.0311,NDCG@5:0.0182) [6.3 s] 
+INFO:root:Save model to ../model/NCF/NCF__Browsing_History__2021__epoch=5_...
+INFO:root:Epoch 2     loss=0.5571 [582.3 s]	 dev=(HR@5:0.0311,NDCG@5:0.0181) test=(HR@5:0.0303,NDCG@5:0.0177) [4.8 s] 
+INFO:root:Epoch 3     loss=0.4165 [592.6 s]	 dev=(HR@5:0.0299,NDCG@5:0.0172) test=(HR@5:0.0335,NDCG@5:0.0199) [5.2 s] 

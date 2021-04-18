@@ -1,0 +1,501 @@
+INFO:root:Namespace(model_name='NCF')
+INFO:root:--------------------------------------------- BEGIN: 2021-04-07 22:06:29 ---------------------------------------------
+INFO:root:
+=================================
+ Arguments       | Values        
+=================================
+ batch_size      | 64           
+ buffer          | 1            
+ dataset         | RealRecord   
+ dropout         | 0.2          
+ early_stop      | 10           
+ emb_size        | 64           
+ epoch           | 100          
+ eval_batch_size | 16           
+ gpu             | 0            
+ history_max     | 20           
+ l2              | 1e-07        
+ layers          | [64]         
+ load            | 0            
+ lr              | 0.0005       
+ metric          | ["NDCG","HR"]
+ num_neg         | 2            
+ num_workers     | 0            
+ optimizer       | Adam         
+ random_seed     | 2021         
+ topk            | [10,20]      
+=================================
+INFO:root:cuda available: False
+INFO:root:# cuda devices: 0
+INFO:root:Reading data from "../data/", dataset = "RealRecord" 
+INFO:root:Counting dataset statistics...
+INFO:root:"# user": 14682, "# item": 8714, "# entry": 151254
+INFO:root:Appending history info...
+INFO:root:Save corpus to ../data/RealRecord\BaseReader.pkl
+INFO:root:#params: 3003072
+INFO:root:NCF(
+  (mf_u_embeddings): Embedding(14682, 64)
+  (mf_i_embeddings): Embedding(8714, 64)
+  (mlp_u_embeddings): Embedding(14682, 64)
+  (mlp_i_embeddings): Embedding(8714, 64)
+  (mlp): ModuleList(
+    (0): Linear(in_features=128, out_features=64, bias=True)
+  )
+  (dropout_layer): Dropout(p=0.2, inplace=False)
+  (prediction): Linear(in_features=128, out_features=1, bias=False)
+)
+INFO:root:Test Before Training: (HR@10:0.1009,HR@20:0.1958,NDCG@10:0.0448,NDCG@20:0.0684)
+INFO:root:Optimizer: Adam
+INFO:root:Epoch 1     loss=0.5766 [141.6 s]	 dev=(HR@10:0.3891,NDCG@10:0.2221) test=(HR@10:0.3818,NDCG@10:0.2171) [8.6 s] 
+INFO:root:Save model to ../model/NCF/NCF__RealRecord__2021__epoch=100__lr=...
+INFO:root:Namespace(model_name='NCF')
+INFO:root:--------------------------------------------- BEGIN: 2021-04-07 22:10:00 ---------------------------------------------
+INFO:root:
+=================================
+ Arguments       | Values        
+=================================
+ batch_size      | 64           
+ buffer          | 1            
+ dataset         | RealRecord   
+ dropout         | 0.2          
+ early_stop      | 10           
+ emb_size        | 64           
+ epoch           | 100          
+ eval_batch_size | 16           
+ gpu             | 0            
+ history_max     | 20           
+ l2              | 1e-07        
+ layers          | [64]         
+ load            | 0            
+ lr              | 0.0005       
+ metric          | ["NDCG","HR"]
+ num_neg         | 2            
+ num_workers     | 0            
+ optimizer       | Adam         
+ random_seed     | 2021         
+ topk            | [10,20]      
+=================================
+INFO:root:cuda available: False
+INFO:root:# cuda devices: 0
+INFO:root:Reading data from "../data/", dataset = "RealRecord" 
+INFO:root:Counting dataset statistics...
+INFO:root:"# user": 14682, "# item": 8714, "# entry": 151254
+INFO:root:Appending history info...
+INFO:root:Save corpus to ../data/RealRecord\BaseReader.pkl
+INFO:root:#params: 3003072
+INFO:root:NCF(
+  (mf_u_embeddings): Embedding(14682, 64)
+  (mf_i_embeddings): Embedding(8714, 64)
+  (mlp_u_embeddings): Embedding(14682, 64)
+  (mlp_i_embeddings): Embedding(8714, 64)
+  (mlp): ModuleList(
+    (0): Linear(in_features=128, out_features=64, bias=True)
+  )
+  (dropout_layer): Dropout(p=0.2, inplace=False)
+  (prediction): Linear(in_features=128, out_features=1, bias=False)
+)
+INFO:root:Test Before Training: (HR@10:0.1009,HR@20:0.1958,NDCG@10:0.0448,NDCG@20:0.0684)
+INFO:root:Optimizer: Adam
+INFO:root:Epoch 1     loss=0.5766 [360.3 s]	 dev=(HR@10:0.3891,NDCG@10:0.2221) test=(HR@10:0.3818,NDCG@10:0.2171) [7.8 s] 
+INFO:root:Namespace(model_name='NCF')
+INFO:root:--------------------------------------------- BEGIN: 2021-04-07 22:24:00 ---------------------------------------------
+INFO:root:
+=================================
+ Arguments       | Values        
+=================================
+ batch_size      | 64           
+ buffer          | 1            
+ dataset         | RealRecord   
+ dropout         | 0.2          
+ early_stop      | 10           
+ emb_size        | 64           
+ epoch           | 100          
+ eval_batch_size | 16           
+ gpu             | 0            
+ history_max     | 20           
+ l2              | 1e-07        
+ layers          | [64]         
+ load            | 0            
+ lr              | 0.0005       
+ metric          | ["NDCG","HR"]
+ num_neg         | 2            
+ num_workers     | 0            
+ optimizer       | Adam         
+ random_seed     | 2021         
+ topk            | [10,20]      
+=================================
+INFO:root:cuda available: False
+INFO:root:# cuda devices: 0
+INFO:root:Reading data from "../data/", dataset = "RealRecord" 
+INFO:root:Counting dataset statistics...
+INFO:root:"# user": 14682, "# item": 8714, "# entry": 151254
+INFO:root:Appending history info...
+INFO:root:Save corpus to ../data/RealRecord\BaseReader.pkl
+INFO:root:#params: 3003072
+INFO:root:NCF(
+  (mf_u_embeddings): Embedding(14682, 64)
+  (mf_i_embeddings): Embedding(8714, 64)
+  (mlp_u_embeddings): Embedding(14682, 64)
+  (mlp_i_embeddings): Embedding(8714, 64)
+  (mlp): ModuleList(
+    (0): Linear(in_features=128, out_features=64, bias=True)
+  )
+  (dropout_layer): Dropout(p=0.2, inplace=False)
+  (prediction): Linear(in_features=128, out_features=1, bias=False)
+)
+INFO:root:Test Before Training: (HR@10:0.1009,HR@20:0.1958,NDCG@10:0.0448,NDCG@20:0.0684)
+INFO:root:Optimizer: Adam
+INFO:root:Epoch 1     loss=0.5766 [169.6 s]	 dev=(HR@10:0.3891,NDCG@10:0.2221) test=(HR@10:0.3818,NDCG@10:0.2171) [127.4 s] 
+INFO:root:Save model to ../model/NCF/NCF__RealRecord__2021__epoch=100__lr=...
+INFO:root:Namespace(model_name='NCF')
+INFO:root:--------------------------------------------- BEGIN: 2021-04-07 22:32:18 ---------------------------------------------
+INFO:root:
+=================================
+ Arguments       | Values        
+=================================
+ batch_size      | 64           
+ buffer          | 1            
+ dataset         | RealRecord   
+ dropout         | 0.2          
+ early_stop      | 10           
+ emb_size        | 64           
+ epoch           | 100          
+ eval_batch_size | 16           
+ gpu             | 0            
+ history_max     | 20           
+ l2              | 1e-07        
+ layers          | [64]         
+ load            | 0            
+ lr              | 0.0005       
+ metric          | ["NDCG","HR"]
+ num_neg         | 2            
+ num_workers     | 0            
+ optimizer       | Adam         
+ random_seed     | 2021         
+ topk            | [10,20]      
+=================================
+INFO:root:cuda available: False
+INFO:root:# cuda devices: 0
+INFO:root:Reading data from "../data/", dataset = "RealRecord" 
+INFO:root:Counting dataset statistics...
+INFO:root:"# user": 14682, "# item": 8714, "# entry": 151254
+INFO:root:Appending history info...
+INFO:root:Namespace(model_name='NCF')
+INFO:root:--------------------------------------------- BEGIN: 2021-04-07 23:33:08 ---------------------------------------------
+INFO:root:
+=================================
+ Arguments       | Values        
+=================================
+ batch_size      | 64           
+ buffer          | 1            
+ dataset         | RealRecord   
+ dropout         | 0.2          
+ early_stop      | 10           
+ emb_size        | 64           
+ epoch           | 100          
+ eval_batch_size | 16           
+ gpu             | 0            
+ history_max     | 20           
+ l2              | 1e-07        
+ layers          | [64]         
+ load            | 0            
+ lr              | 0.0005       
+ metric          | ["NDCG","HR"]
+ num_neg         | 2            
+ num_workers     | 0            
+ optimizer       | Adam         
+ random_seed     | 2021         
+ topk            | [10,20]      
+=================================
+INFO:root:cuda available: False
+INFO:root:# cuda devices: 0
+INFO:root:Reading data from "../data/", dataset = "RealRecord" 
+INFO:root:Counting dataset statistics...
+INFO:root:"# user": 14682, "# item": 8714, "# entry": 151254
+INFO:root:Appending history info...
+INFO:root:Save corpus to ../data/RealRecord\BaseReader.pkl
+INFO:root:#params: 3003072
+INFO:root:NCF(
+  (mf_u_embeddings): Embedding(14682, 64)
+  (mf_i_embeddings): Embedding(8714, 64)
+  (mlp_u_embeddings): Embedding(14682, 64)
+  (mlp_i_embeddings): Embedding(8714, 64)
+  (mlp): ModuleList(
+    (0): Linear(in_features=128, out_features=64, bias=True)
+  )
+  (dropout_layer): Dropout(p=0.2, inplace=False)
+  (prediction): Linear(in_features=128, out_features=1, bias=False)
+)
+INFO:root:Test Before Training: (HR@10:0.1009,HR@20:0.1958,NDCG@10:0.0448,NDCG@20:0.0684)
+INFO:root:Optimizer: Adam
+INFO:root:Namespace(model_name='NCF')
+INFO:root:Namespace(model_name='NCF')
+INFO:root:--------------------------------------------- BEGIN: 2021-04-08 01:29:37 ---------------------------------------------
+INFO:root:
+=================================
+ Arguments       | Values        
+=================================
+ batch_size      | 64           
+ buffer          | 1            
+ dataset         | RealRecord   
+ dropout         | 0.2          
+ early_stop      | 10           
+ emb_size        | 64           
+ epoch           | 100          
+ eval_batch_size | 16           
+ gpu             | 0            
+ history_max     | 20           
+ l2              | 1e-07        
+ layers          | [64]         
+ load            | 0            
+ lr              | 0.0005       
+ metric          | ["NDCG","HR"]
+ num_neg         | 2            
+ num_workers     | 0            
+ optimizer       | Adam         
+ random_seed     | 2021         
+ topk            | [10,20]      
+=================================
+INFO:root:cuda available: False
+INFO:root:# cuda devices: 0
+INFO:root:Reading data from "../data/", dataset = "RealRecord" 
+INFO:root:Counting dataset statistics...
+INFO:root:"# user": 14682, "# item": 8714, "# entry": 151254
+INFO:root:Appending history info...
+INFO:root:Save corpus to ../data/RealRecord\BaseReader.pkl
+INFO:root:#params: 3003072
+INFO:root:NCF(
+  (mf_u_embeddings): Embedding(14682, 64)
+  (mf_i_embeddings): Embedding(8714, 64)
+  (mlp_u_embeddings): Embedding(14682, 64)
+  (mlp_i_embeddings): Embedding(8714, 64)
+  (mlp): ModuleList(
+    (0): Linear(in_features=128, out_features=64, bias=True)
+  )
+  (dropout_layer): Dropout(p=0.2, inplace=False)
+  (prediction): Linear(in_features=128, out_features=1, bias=False)
+)
+INFO:root:Test Before Training: (HR@10:0.1009,HR@20:0.1958,NDCG@10:0.0448,NDCG@20:0.0684)
+INFO:root:Optimizer: Adam
+INFO:root:Epoch 1     loss=0.5766 [140.9 s]	 dev=(HR@10:0.3891,NDCG@10:0.2221) test=(HR@10:0.3818,NDCG@10:0.2171) [7.7 s] 
+INFO:root:Save model to ../model/NCF/NCF__RealRecord__2021__epoch=100__lr=...
+INFO:root:Epoch 2     loss=0.4788 [151.4 s]	 dev=(HR@10:0.4088,NDCG@10:0.2443) test=(HR@10:0.3927,NDCG@10:0.2345) [7.7 s] 
+INFO:root:Save model to ../model/NCF/NCF__RealRecord__2021__epoch=100__lr=...
+INFO:root:Epoch 3     loss=0.3908 [140.7 s]	 dev=(HR@10:0.4296,NDCG@10:0.2610) test=(HR@10:0.4138,NDCG@10:0.2501) [8.5 s] 
+INFO:root:Save model to ../model/NCF/NCF__RealRecord__2021__epoch=100__lr=...
+INFO:root:Epoch 4     loss=0.3233 [142.7 s]	 dev=(HR@10:0.4440,NDCG@10:0.2744) test=(HR@10:0.4223,NDCG@10:0.2606) [8.5 s] 
+INFO:root:Save model to ../model/NCF/NCF__RealRecord__2021__epoch=100__lr=...
+INFO:root:Epoch 5     loss=0.2596 [143.4 s]	 dev=(HR@10:0.4579,NDCG@10:0.2848) test=(HR@10:0.4323,NDCG@10:0.2688) [8.3 s] 
+INFO:root:Save model to ../model/NCF/NCF__RealRecord__2021__epoch=100__lr=...
+INFO:root:Epoch 6     loss=0.1973 [141.1 s]	 dev=(HR@10:0.4607,NDCG@10:0.2916) test=(HR@10:0.4348,NDCG@10:0.2731) [8.2 s] 
+INFO:root:Save model to ../model/NCF/NCF__RealRecord__2021__epoch=100__lr=...
+INFO:root:Epoch 7     loss=0.1455 [138.6 s]	 dev=(HR@10:0.4724,NDCG@10:0.3011) test=(HR@10:0.4421,NDCG@10:0.2785) [8.2 s] 
+INFO:root:Save model to ../model/NCF/NCF__RealRecord__2021__epoch=100__lr=...
+INFO:root:Epoch 8     loss=0.1062 [207.8 s]	 dev=(HR@10:0.4782,NDCG@10:0.3040) test=(HR@10:0.4463,NDCG@10:0.2803) [18.1 s] 
+INFO:root:Save model to ../model/NCF/NCF__RealRecord__2021__epoch=100__lr=...
+INFO:root:Epoch 9     loss=0.0801 [291.4 s]	 dev=(HR@10:0.4846,NDCG@10:0.3119) test=(HR@10:0.4497,NDCG@10:0.2838) [30.6 s] 
+INFO:root:Save model to ../model/NCF/NCF__RealRecord__2021__epoch=100__lr=...
+INFO:root:Epoch 10    loss=0.0585 [288.1 s]	 dev=(HR@10:0.4821,NDCG@10:0.3092) test=(HR@10:0.4509,NDCG@10:0.2825) [35.8 s] 
+INFO:root:Epoch 11    loss=0.0489 [153.2 s]	 dev=(HR@10:0.4792,NDCG@10:0.3084) test=(HR@10:0.4491,NDCG@10:0.2821) [11.5 s] 
+INFO:root:Epoch 12    loss=0.0414 [140.8 s]	 dev=(HR@10:0.4754,NDCG@10:0.3039) test=(HR@10:0.4432,NDCG@10:0.2788) [13.5 s] 
+INFO:root:Epoch 13    loss=0.0351 [137.4 s]	 dev=(HR@10:0.4813,NDCG@10:0.3088) test=(HR@10:0.4442,NDCG@10:0.2815) [11.6 s] 
+INFO:root:Epoch 14    loss=0.0309 [139.9 s]	 dev=(HR@10:0.4722,NDCG@10:0.3025) test=(HR@10:0.4410,NDCG@10:0.2765) [11.5 s] 
+INFO:root:Epoch 15    loss=0.0280 [140.7 s]	 dev=(HR@10:0.4718,NDCG@10:0.3047) test=(HR@10:0.4308,NDCG@10:0.2720) [12.2 s] 
+INFO:root:Epoch 16    loss=0.0255 [139.2 s]	 dev=(HR@10:0.4751,NDCG@10:0.3065) test=(HR@10:0.4357,NDCG@10:0.2738) [11.5 s] 
+INFO:root:Epoch 17    loss=0.0224 [140.7 s]	 dev=(HR@10:0.4682,NDCG@10:0.3037) test=(HR@10:0.4291,NDCG@10:0.2723) [11.6 s] 
+INFO:root:Epoch 18    loss=0.0215 [139.5 s]	 dev=(HR@10:0.4675,NDCG@10:0.2999) test=(HR@10:0.4267,NDCG@10:0.2688) [11.7 s] 
+INFO:root:Epoch 19    loss=0.0195 [139.2 s]	 dev=(HR@10:0.4638,NDCG@10:0.2998) test=(HR@10:0.4208,NDCG@10:0.2667) [12.0 s] 
+INFO:root:Epoch 20    loss=0.0197 [140.4 s]	 dev=(HR@10:0.4654,NDCG@10:0.3015) test=(HR@10:0.4195,NDCG@10:0.2641) [12.4 s] 
+INFO:root:Epoch 21    loss=0.0185 [140.3 s]	 dev=(HR@10:0.4636,NDCG@10:0.3013) test=(HR@10:0.4167,NDCG@10:0.2623) [13.3 s] 
+INFO:root:Epoch 22    loss=0.0175 [142.2 s]	 dev=(HR@10:0.4626,NDCG@10:0.2999) test=(HR@10:0.4165,NDCG@10:0.2617) [13.8 s] 
+INFO:root:Epoch 23    loss=0.0173 [140.0 s]	 dev=(HR@10:0.4618,NDCG@10:0.2991) test=(HR@10:0.4171,NDCG@10:0.2609) [13.5 s] 
+INFO:root:Epoch 24    loss=0.0159 [141.0 s]	 dev=(HR@10:0.4609,NDCG@10:0.2980) test=(HR@10:0.4126,NDCG@10:0.2591) [14.6 s] 
+INFO:root:Epoch 25    loss=0.0142 [142.7 s]	 dev=(HR@10:0.4597,NDCG@10:0.2975) test=(HR@10:0.4146,NDCG@10:0.2585) [14.3 s] 
+INFO:root:Epoch 26    loss=0.0148 [139.4 s]	 dev=(HR@10:0.4603,NDCG@10:0.2995) test=(HR@10:0.4164,NDCG@10:0.2608) [15.4 s] 
+INFO:root:Epoch 27    loss=0.0138 [143.2 s]	 dev=(HR@10:0.4567,NDCG@10:0.2956) test=(HR@10:0.4117,NDCG@10:0.2589) [15.4 s] 
+INFO:root:Epoch 28    loss=0.0134 [140.3 s]	 dev=(HR@10:0.4574,NDCG@10:0.2964) test=(HR@10:0.4079,NDCG@10:0.2548) [16.6 s] 
+INFO:root:Epoch 29    loss=0.0132 [140.9 s]	 dev=(HR@10:0.4577,NDCG@10:0.2966) test=(HR@10:0.4092,NDCG@10:0.2567) [16.4 s] 
+INFO:root:Early stop at 29 based on dev result.
+INFO:root:
+Best Iter(dev)=    9	 dev=(HR@10:0.4846,NDCG@10:0.3119) test=(HR@10:0.4497,NDCG@10:0.2838) [4862.0 s] 
+INFO:root:Load model from ../model/NCF/NCF__RealRecord__2021__epoch=100__lr=0.0005__l2=1e-07.pt
+INFO:root:
+Test After Training: (HR@10:0.4497,HR@20:0.5617,NDCG@10:0.2838,NDCG@20:0.3120)
+INFO:root:
+--------------------------------------------- END: 2021-04-08 02:51:05 ---------------------------------------------
+INFO:root:Namespace(model_name='NCF')
+INFO:root:--------------------------------------------- BEGIN: 2021-04-08 06:59:30 ---------------------------------------------
+INFO:root:
+=================================
+ Arguments       | Values        
+=================================
+ batch_size      | 128          
+ buffer          | 1            
+ dataset         | RealRecord   
+ dropout         | 0.2          
+ early_stop      | 10           
+ emb_size        | 64           
+ epoch           | 100          
+ eval_batch_size | 16           
+ gpu             | 0            
+ history_max     | 20           
+ l2              | 1e-07        
+ layers          | [64]         
+ load            | 0            
+ lr              | 0.0005       
+ metric          | ["NDCG","HR"]
+ num_neg         | 2            
+ num_workers     | 0            
+ optimizer       | Adam         
+ random_seed     | 2021         
+ topk            | [10,20]      
+=================================
+INFO:root:cuda available: False
+INFO:root:# cuda devices: 0
+INFO:root:Reading data from "../data/", dataset = "RealRecord" 
+INFO:root:Counting dataset statistics...
+INFO:root:"# user": 14682, "# item": 8714, "# entry": 151254
+INFO:root:Appending history info...
+INFO:root:Save corpus to ../data/RealRecord\BaseReader.pkl
+INFO:root:#params: 3003072
+INFO:root:NCF(
+  (mf_u_embeddings): Embedding(14682, 64)
+  (mf_i_embeddings): Embedding(8714, 64)
+  (mlp_u_embeddings): Embedding(14682, 64)
+  (mlp_i_embeddings): Embedding(8714, 64)
+  (mlp): ModuleList(
+    (0): Linear(in_features=128, out_features=64, bias=True)
+  )
+  (dropout_layer): Dropout(p=0.2, inplace=False)
+  (prediction): Linear(in_features=128, out_features=1, bias=False)
+)
+INFO:root:Test Before Training: (HR@10:0.1009,HR@20:0.1958,NDCG@10:0.0448,NDCG@20:0.0684)
+INFO:root:Optimizer: Adam
+INFO:root:Epoch 1     loss=0.6259 [73.9 s]	 dev=(HR@10:0.3859,NDCG@10:0.2215) test=(HR@10:0.3373,NDCG@10:0.1961) [8.7 s] 
+INFO:root:Save model to ../model/NCF/NCF__RealRecord__2021__epoch=100__lr=...
+INFO:root:Epoch 2     loss=0.5203 [75.4 s]	 dev=(HR@10:0.4292,NDCG@10:0.2509) test=(HR@10:0.3864,NDCG@10:0.2223) [8.7 s] 
+INFO:root:Save model to ../model/NCF/NCF__RealRecord__2021__epoch=100__lr=...
+INFO:root:Namespace(model_name='NCF')
+INFO:root:--------------------------------------------- BEGIN: 2021-04-08 07:07:25 ---------------------------------------------
+INFO:root:
+=================================
+ Arguments       | Values        
+=================================
+ batch_size      | 64           
+ buffer          | 1            
+ dataset         | RealRecord   
+ dropout         | 0.2          
+ early_stop      | 10           
+ emb_size        | 64           
+ epoch           | 100          
+ eval_batch_size | 16           
+ gpu             | 0            
+ history_max     | 20           
+ l2              | 1e-07        
+ layers          | [64]         
+ load            | 0            
+ lr              | 0.0005       
+ metric          | ["NDCG","HR"]
+ num_neg         | 2            
+ num_workers     | 0            
+ optimizer       | Adam         
+ random_seed     | 2021         
+ topk            | [10,20]      
+=================================
+INFO:root:cuda available: False
+INFO:root:# cuda devices: 0
+INFO:root:Reading data from "../data/", dataset = "RealRecord" 
+INFO:root:Namespace(model_name='NCF')
+INFO:root:--------------------------------------------- BEGIN: 2021-04-08 07:07:41 ---------------------------------------------
+INFO:root:
+=================================
+ Arguments       | Values        
+=================================
+ batch_size      | 64           
+ buffer          | 1            
+ dataset         | RealRecord   
+ dropout         | 0.2          
+ early_stop      | 10           
+ emb_size        | 64           
+ epoch           | 100          
+ eval_batch_size | 16           
+ gpu             | 0            
+ history_max     | 20           
+ l2              | 1e-07        
+ layers          | [64]         
+ load            | 0            
+ lr              | 0.0005       
+ metric          | ["NDCG","HR"]
+ num_neg         | 2            
+ num_workers     | 0            
+ optimizer       | Adam         
+ random_seed     | 2021         
+ topk            | [10,20]      
+=================================
+INFO:root:cuda available: False
+INFO:root:# cuda devices: 0
+INFO:root:Reading data from "../data/", dataset = "RealRecord" 
+INFO:root:Counting dataset statistics...
+INFO:root:"# user": 14682, "# item": 8714, "# entry": 151254
+INFO:root:Appending history info...
+INFO:root:Save corpus to ../data/RealRecord\BaseReader.pkl
+INFO:root:#params: 3003072
+INFO:root:NCF(
+  (mf_u_embeddings): Embedding(14682, 64)
+  (mf_i_embeddings): Embedding(8714, 64)
+  (mlp_u_embeddings): Embedding(14682, 64)
+  (mlp_i_embeddings): Embedding(8714, 64)
+  (mlp): ModuleList(
+    (0): Linear(in_features=128, out_features=64, bias=True)
+  )
+  (dropout_layer): Dropout(p=0.2, inplace=False)
+  (prediction): Linear(in_features=128, out_features=1, bias=False)
+)
+INFO:root:Test Before Training: (HR@10:0.1009,HR@20:0.1958,NDCG@10:0.0448,NDCG@20:0.0684)
+INFO:root:Optimizer: Adam
+INFO:root:Epoch 1     loss=0.5766 [137.2 s]	 dev=(HR@10:0.3891,NDCG@10:0.2221) test=(HR@10:0.3818,NDCG@10:0.2171) [7.6 s] 
+INFO:root:Save model to ../model/NCF/NCF__RealRecord__2021__epoch=100__lr=...
+INFO:root:Epoch 2     loss=0.4788 [148.6 s]	 dev=(HR@10:0.4088,NDCG@10:0.2443) test=(HR@10:0.3927,NDCG@10:0.2345) [7.6 s] 
+INFO:root:Save model to ../model/NCF/NCF__RealRecord__2021__epoch=100__lr=...
+INFO:root:Epoch 3     loss=0.3908 [138.8 s]	 dev=(HR@10:0.4296,NDCG@10:0.2610) test=(HR@10:0.4138,NDCG@10:0.2501) [7.8 s] 
+INFO:root:Save model to ../model/NCF/NCF__RealRecord__2021__epoch=100__lr=...
+INFO:root:Epoch 4     loss=0.3233 [140.2 s]	 dev=(HR@10:0.4440,NDCG@10:0.2744) test=(HR@10:0.4223,NDCG@10:0.2606) [8.5 s] 
+INFO:root:Save model to ../model/NCF/NCF__RealRecord__2021__epoch=100__lr=...
+INFO:root:Epoch 5     loss=0.2596 [139.2 s]	 dev=(HR@10:0.4579,NDCG@10:0.2848) test=(HR@10:0.4323,NDCG@10:0.2688) [7.8 s] 
+INFO:root:Save model to ../model/NCF/NCF__RealRecord__2021__epoch=100__lr=...
+INFO:root:Epoch 6     loss=0.1973 [140.2 s]	 dev=(HR@10:0.4607,NDCG@10:0.2916) test=(HR@10:0.4348,NDCG@10:0.2731) [8.5 s] 
+INFO:root:Save model to ../model/NCF/NCF__RealRecord__2021__epoch=100__lr=...
+INFO:root:Epoch 7     loss=0.1455 [138.3 s]	 dev=(HR@10:0.4724,NDCG@10:0.3011) test=(HR@10:0.4421,NDCG@10:0.2785) [8.6 s] 
+INFO:root:Save model to ../model/NCF/NCF__RealRecord__2021__epoch=100__lr=...
+INFO:root:Epoch 8     loss=0.1062 [141.2 s]	 dev=(HR@10:0.4782,NDCG@10:0.3040) test=(HR@10:0.4463,NDCG@10:0.2803) [11.9 s] 
+INFO:root:Save model to ../model/NCF/NCF__RealRecord__2021__epoch=100__lr=...
+INFO:root:Epoch 9     loss=0.0801 [141.1 s]	 dev=(HR@10:0.4846,NDCG@10:0.3119) test=(HR@10:0.4497,NDCG@10:0.2838) [12.4 s] 
+INFO:root:Save model to ../model/NCF/NCF__RealRecord__2021__epoch=100__lr=...
+INFO:root:Epoch 10    loss=0.0585 [143.6 s]	 dev=(HR@10:0.4821,NDCG@10:0.3092) test=(HR@10:0.4509,NDCG@10:0.2825) [12.0 s] 
+INFO:root:Epoch 11    loss=0.0489 [141.7 s]	 dev=(HR@10:0.4792,NDCG@10:0.3084) test=(HR@10:0.4491,NDCG@10:0.2821) [11.6 s] 
+INFO:root:Epoch 12    loss=0.0414 [144.2 s]	 dev=(HR@10:0.4754,NDCG@10:0.3039) test=(HR@10:0.4432,NDCG@10:0.2788) [12.3 s] 
+INFO:root:Epoch 13    loss=0.0351 [143.2 s]	 dev=(HR@10:0.4813,NDCG@10:0.3088) test=(HR@10:0.4442,NDCG@10:0.2815) [11.6 s] 
+INFO:root:Epoch 14    loss=0.0309 [143.5 s]	 dev=(HR@10:0.4722,NDCG@10:0.3025) test=(HR@10:0.4410,NDCG@10:0.2765) [11.8 s] 
+INFO:root:Epoch 15    loss=0.0280 [141.9 s]	 dev=(HR@10:0.4718,NDCG@10:0.3047) test=(HR@10:0.4308,NDCG@10:0.2720) [11.5 s] 
+INFO:root:Epoch 16    loss=0.0255 [142.1 s]	 dev=(HR@10:0.4751,NDCG@10:0.3065) test=(HR@10:0.4357,NDCG@10:0.2738) [12.1 s] 
+INFO:root:Epoch 17    loss=0.0224 [139.2 s]	 dev=(HR@10:0.4682,NDCG@10:0.3037) test=(HR@10:0.4291,NDCG@10:0.2723) [12.2 s] 
+INFO:root:Epoch 18    loss=0.0215 [141.9 s]	 dev=(HR@10:0.4675,NDCG@10:0.2999) test=(HR@10:0.4267,NDCG@10:0.2688) [12.0 s] 
+INFO:root:Epoch 19    loss=0.0195 [152.8 s]	 dev=(HR@10:0.4638,NDCG@10:0.2998) test=(HR@10:0.4208,NDCG@10:0.2667) [12.3 s] 
+INFO:root:Epoch 20    loss=0.0197 [146.2 s]	 dev=(HR@10:0.4654,NDCG@10:0.3015) test=(HR@10:0.4195,NDCG@10:0.2641) [12.8 s] 
+INFO:root:Epoch 21    loss=0.0185 [145.3 s]	 dev=(HR@10:0.4636,NDCG@10:0.3013) test=(HR@10:0.4167,NDCG@10:0.2623) [13.0 s] 
+INFO:root:Epoch 22    loss=0.0175 [146.6 s]	 dev=(HR@10:0.4626,NDCG@10:0.2999) test=(HR@10:0.4165,NDCG@10:0.2617) [14.0 s] 
+INFO:root:Epoch 23    loss=0.0173 [144.1 s]	 dev=(HR@10:0.4618,NDCG@10:0.2991) test=(HR@10:0.4171,NDCG@10:0.2609) [15.1 s] 
+INFO:root:Epoch 24    loss=0.0159 [146.1 s]	 dev=(HR@10:0.4609,NDCG@10:0.2980) test=(HR@10:0.4126,NDCG@10:0.2591) [15.1 s] 
+INFO:root:Epoch 25    loss=0.0142 [147.3 s]	 dev=(HR@10:0.4597,NDCG@10:0.2975) test=(HR@10:0.4146,NDCG@10:0.2585) [15.6 s] 
+INFO:root:Epoch 26    loss=0.0148 [145.7 s]	 dev=(HR@10:0.4603,NDCG@10:0.2995) test=(HR@10:0.4164,NDCG@10:0.2608) [16.6 s] 
+INFO:root:Epoch 27    loss=0.0138 [146.1 s]	 dev=(HR@10:0.4567,NDCG@10:0.2956) test=(HR@10:0.4117,NDCG@10:0.2589) [16.6 s] 
+INFO:root:Epoch 28    loss=0.0134 [145.7 s]	 dev=(HR@10:0.4574,NDCG@10:0.2964) test=(HR@10:0.4079,NDCG@10:0.2548) [16.7 s] 
+INFO:root:Epoch 29    loss=0.0132 [146.0 s]	 dev=(HR@10:0.4577,NDCG@10:0.2966) test=(HR@10:0.4092,NDCG@10:0.2567) [18.0 s] 
+INFO:root:Early stop at 29 based on dev result.
+INFO:root:
+Best Iter(dev)=    9	 dev=(HR@10:0.4846,NDCG@10:0.3119) test=(HR@10:0.4497,NDCG@10:0.2838) [4512.1 s] 
+INFO:root:Load model from ../model/NCF/NCF__RealRecord__2021__epoch=100__lr=0.0005__l2=1e-07.pt
+INFO:root:
+Test After Training: (HR@10:0.4497,HR@20:0.5617,NDCG@10:0.2838,NDCG@20:0.3120)
+INFO:root:
+--------------------------------------------- END: 2021-04-08 08:23:16 ---------------------------------------------
