@@ -36,7 +36,7 @@ v系列特征	匿名特征，包含v0-14在内15个匿名特征
 # 4.使用xgboost二手车价格预测模型及调参 
 
 	regress.py  
-	![image](https://user-images.githubusercontent.com/82042336/198589544-45fb67cc-309f-4b88-a697-d802403b2f55.png)
+![image](https://user-images.githubusercontent.com/82042336/198589544-45fb67cc-309f-4b88-a697-d802403b2f55.png)
 
 # 5.主试验 
 	train_experiment.py
