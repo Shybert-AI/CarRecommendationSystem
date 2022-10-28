@@ -54,7 +54,7 @@ v系列特征	匿名特征，包含v0-14在内15个匿名特征
 .   
 │   Neural Collaborative Filtering神经协同过滤.pdf  
 │   Self-Attentive Sequential Recommendation.pdf  
-│  
+│
 ├─data  
 │    ├─Browsing_History  
 │    │      generationdata.py  
