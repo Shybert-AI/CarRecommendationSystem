@@ -1,6 +1,6 @@
 # CarRecommendationSystem
 
-1.数据来源  
+# 1.数据来源  
 二手车交易价格预测	
 https://tianchi.aliyun.com/competition/entrance/231784/information
 数据含义:
@@ -23,21 +23,21 @@ creatDate	汽车上线时间，即开始售卖时间
 price	二手车交易价格（预测目标）
 v系列特征	匿名特征，包含v0-14在内15个匿名特征
 
-2.数据分析   
+# 2.数据分析   
    1.数据分析.ipynb
    1.通过分析缺失值，['model', 'bodyType', 'fuelType', 'gearbox']列的缺失值为 [1, 4506, 5981, 8680]，因此删除'bodyType', 'fuelType', 'gearbox'列 
    2.通过数据类型分析，"notRepairedDamage"列中存在24324个"-"值，考虑用nan进行替换 
    3.观测到offerType和seller类别特征严重倾斜，一般不会对预测有什么帮助，故这边先删掉 
    4.预测价格不是服从正态分布，因此进行对数变换
 	
-3.数据预处理 dataset.py
+# 3.数据预处理 dataset.py
 
-4.使用xgboost二手车价格预测模型及调参 regress.py  
+# 4.使用xgboost二手车价格预测模型及调参 regress.py  
 
-5.主试验 train_experiment.py
+# 5.主试验 train_experiment.py
 
   1）由于预测价格不是服从正态分布，因此进行对数变换，变换数据前后进行验证
   2）采用主成分分析建模和正常数据建模
   得到预测价格需要进行变换，不使用主成分分析
   
-6.测试模块 test.py
+# 6.测试模块 test.py
