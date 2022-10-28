@@ -51,9 +51,9 @@ v系列特征	匿名特征，包含v0-14在内15个匿名特征
 # 基于神经协同过滤NCF的推荐系统
 	待更新，代码在recommed目录下
 	python main.py --model_name NCF --emb_size 64 --layers '[64]' --lr 5e-4 --l2 1e-7 --dropout 0.2 --dataset 'Browsing_History' --epoch 10
-.
-│  Neural Collaborative Filtering神经协同过滤.pdf  
-│  Self-Attentive Sequential Recommendation.pdf  
+.   
+│   Neural Collaborative Filtering神经协同过滤.pdf  
+│   Self-Attentive Sequential Recommendation.pdf  
 │  
 ├─data  
 │    ├─Browsing_History  
@@ -87,23 +87,23 @@ v系列特征	匿名特征，包含v0-14在内15个匿名特征
     │  result_LOSS_HR_NDCG.py  
     │  run.sh  
     │  test.py  
-    │
+    │ 
     ├─helpers  
     │  │  BaseReader.py  
     │  │  BaseRunner.py  
     │  │  __init__.py  
-    │
+    │ 
     ├─models  
     │  │  BaseModel.py  
-    │  │
+    │  │ 
     │  ├─general  
-    │  │  │  NCF.py  
-    │  │  │  __init__.py  
+    │  │  │  NCF.py   
+    │  │  │  __init__.py   
     │  │
     │  ├─sequential  
     │  │  │  SASRec.py  
     │  │  │  __init__.py  
-    │
+    │ 
     └─utils  
         │  layers.py  
         │  utils.py  
