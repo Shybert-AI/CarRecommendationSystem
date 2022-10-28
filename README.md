@@ -51,60 +51,60 @@ v系列特征	匿名特征，包含v0-14在内15个匿名特征
 # 基于神经协同过滤NCF的推荐系统
 	待更新，代码在recommed目录下
 .
-│  Neural Collaborative Filtering神经协同过滤.pdf
-│  Self-Attentive Sequential Recommendation.pdf
+│  Neural Collaborative Filtering神经协同过滤.pdf  
+│  Self-Attentive Sequential Recommendation.pdf  
 │
-├─data
-│  ├─Browsing_History
-│  │      generationdata.py
-│  │      pre_data.py
-│  │      结果可视化.png
+├─data  
+│  ├─Browsing_History  
+│  │      generationdata.py  
+│  │      pre_data.py  
+│  │      结果可视化.png  
 │  │
-│  └─RealRecord
-│          data.csv
-│          pre_data.py
-│          结果可视化.png
+│  └─RealRecord  
+│          data.csv  
+│          pre_data.py  
+│          结果可视化.png  
 │
-├─log
-│  ├─NCF
-│  │      NCF__Browsing_History__2021__epoch=100__lr=0.0005__l2=1e-07.txt
-│  │      NCF__Browsing_History__2021__epoch=10__lr=0.0005__l2=1e-07.txt
-│  │      NCF__Browsing_History__2021__epoch=1__lr=0.0005__l2=1e-07.txt
-│  │      NCF__Browsing_History__2021__epoch=2__lr=0.0005__l2=1e-07.txt
-│  │      NCF__Browsing_History__2021__epoch=30__lr=0.0005__l2=1e-07.txt
-│  │      NCF__Browsing_History__2021__epoch=5__lr=0.0005__l2=1e-07.txt
-│  │      NCF__RealRecord__2021__epoch=100__lr=0.0005__l2=1e-07.txt
+├─log  
+│  ├─NCF  
+│  │      NCF__Browsing_History__2021__epoch=100__lr=0.0005__l2=1e-07.txt  
+│  │      NCF__Browsing_History__2021__epoch=10__lr=0.0005__l2=1e-07.txt  
+│  │      NCF__Browsing_History__2021__epoch=1__lr=0.0005__l2=1e-07.txt  
+│  │      NCF__Browsing_History__2021__epoch=2__lr=0.0005__l2=1e-07.txt  
+│  │      NCF__Browsing_History__2021__epoch=30__lr=0.0005__l2=1e-07.txt  
+│  │      NCF__Browsing_History__2021__epoch=5__lr=0.0005__l2=1e-07.txt  
+│  │      NCF__RealRecord__2021__epoch=100__lr=0.0005__l2=1e-07.txt  
 │  │
-│  └─SASRec
-│          SASRec__RealRecord__2021__epoch=100__lr=0.0001__l2=1e-06.txt
+│  └─SASRec  
+│          SASRec__RealRecord__2021__epoch=100__lr=0.0001__l2=1e-06.txt  
 │
-├─model
-└─src
-    │  exp.py
-    │  main.py
-    │  README.md
-    │  result_LOSS_HR_NDCG.py
-    │  run.sh
-    │  test.py
+├─model  
+└─src  
+    │  exp.py  
+    │  main.py  
+    │  README.md  
+    │  result_LOSS_HR_NDCG.py  
+    │  run.sh  
+    │  test.py  
     │
-    ├─helpers
-    │  │  BaseReader.py
-    │  │  BaseRunner.py
-    │  │  __init__.py
+    ├─helpers  
+    │  │  BaseReader.py  
+    │  │  BaseRunner.py  
+    │  │  __init__.py  
     │
-    ├─models
-    │  │  BaseModel.py
+    ├─models  
+    │  │  BaseModel.py  
     │  │
-    │  ├─general
-    │  │  │  NCF.py
-    │  │  │  __init__.py
+    │  ├─general  
+    │  │  │  NCF.py  
+    │  │  │  __init__.py  
     │  │
-    │  ├─sequential
-    │  │  │  SASRec.py
-    │  │  │  __init__.py
+    │  ├─sequential  
+    │  │  │  SASRec.py  
+    │  │  │  __init__.py  
     │
-    └─utils
-        │  layers.py
-        │  utils.py
-        │  __init__.py
+    └─utils  
+        │  layers.py  
+        │  utils.py  
+        │  __init__.py  
 	
